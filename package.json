@@ -1,6 +1,6 @@
 {
   "name": "@olism/bd-geo",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Bangladesh geographical data and utilities",
   "license": "MIT",
   "type": "module",
