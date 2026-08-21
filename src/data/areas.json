@@ -1,0 +1,674 @@
+[
+  {
+    "id": 1,
+    "name": "Mirpur-1",
+    "nameBn": "মিরপুর-১",
+    "thanaId": 1,
+    "latitude": 23.8067,
+    "longitude": 90.3686
+  },
+  {
+    "id": 2,
+    "name": "Mirpur-2",
+    "nameBn": "মিরপুর-২",
+    "thanaId": 1,
+    "latitude": 23.8041,
+    "longitude": 90.3657
+  },
+  {
+    "id": 3,
+    "name": "Mirpur-6",
+    "nameBn": "মিরপুর-৬",
+    "thanaId": 1,
+    "latitude": 23.8222,
+    "longitude": 90.3655
+  },
+  {
+    "id": 4,
+    "name": "Mirpur-10",
+    "nameBn": "মিরপুর-১০",
+    "thanaId": 1,
+    "latitude": 23.8067,
+    "longitude": 90.3686
+  },
+  {
+    "id": 5,
+    "name": "Mirpur-11",
+    "nameBn": "মিরপুর-১১",
+    "thanaId": 1,
+    "latitude": 23.8207,
+    "longitude": 90.3752
+  },
+  {
+    "id": 6,
+    "name": "Mirpur-12",
+    "nameBn": "মিরপুর-১২",
+    "thanaId": 1,
+    "latitude": 23.8298,
+    "longitude": 90.3678
+  },
+  {
+    "id": 7,
+    "name": "Mirpur-13",
+    "nameBn": "মিরপুর-১৩",
+    "thanaId": 1,
+    "latitude": 23.8219,
+    "longitude": 90.3659
+  },
+  {
+    "id": 8,
+    "name": "Mirpur-14",
+    "nameBn": "মিরপুর-১৪",
+    "thanaId": 1,
+    "latitude": 23.8008,
+    "longitude": 90.3818
+  },
+  {
+    "id": 9,
+    "name": "Kazipara",
+    "nameBn": "কাজীপাড়া",
+    "thanaId": 1,
+    "latitude": 23.7938,
+    "longitude": 90.3747
+  },
+  {
+    "id": 10,
+    "name": "Shewrapara",
+    "nameBn": "শেওড়াপাড়া",
+    "thanaId": 1,
+    "latitude": 23.7878,
+    "longitude": 90.3758
+  },
+  {
+    "id": 11,
+    "name": "Shyamoli",
+    "nameBn": "শ্যামলী",
+    "thanaId": 2,
+    "latitude": 23.7759,
+    "longitude": 90.3656
+  },
+  {
+    "id": 12,
+    "name": "Mohammadpur",
+    "nameBn": "মোহাম্মদপুর",
+    "thanaId": 2,
+    "latitude": 23.7658,
+    "longitude": 90.3581
+  },
+  {
+    "id": 13,
+    "name": "Tajmahal Road",
+    "nameBn": "তাজমহল রোড",
+    "thanaId": 2,
+    "latitude": 23.7627,
+    "longitude": 90.3547
+  },
+  {
+    "id": 14,
+    "name": "Adabor",
+    "nameBn": "আদাবর",
+    "thanaId": 24,
+    "latitude": 23.7754,
+    "longitude": 90.3486
+  },
+  {
+    "id": 15,
+    "name": "Lalmatia",
+    "nameBn": "লালমাটিয়া",
+    "thanaId": 2,
+    "latitude": 23.7582,
+    "longitude": 90.3671
+  },
+  {
+    "id": 16,
+    "name": "Geneva Camp",
+    "nameBn": "জেনেভা ক্যাম্প",
+    "thanaId": 2,
+    "latitude": 23.7737,
+    "longitude": 90.3617
+  },
+  {
+    "id": 17,
+    "name": "Dhanmondi",
+    "nameBn": "ধানমন্ডি",
+    "thanaId": 3,
+    "latitude": 23.7461,
+    "longitude": 90.3742
+  },
+  {
+    "id": 18,
+    "name": "Dhanmondi-27",
+    "nameBn": "ধানমন্ডি-২৭",
+    "thanaId": 3,
+    "latitude": 23.7564,
+    "longitude": 90.3665
+  },
+  {
+    "id": 19,
+    "name": "Jigatola",
+    "nameBn": "জিগাতলা",
+    "thanaId": 3,
+    "latitude": 23.7418,
+    "longitude": 90.3675
+  },
+  {
+    "id": 20,
+    "name": "Satmasjid Road",
+    "nameBn": "সাতমসজিদ রোড",
+    "thanaId": 3,
+    "latitude": 23.7486,
+    "longitude": 90.3625
+  },
+  {
+    "id": 21,
+    "name": "Uttara Sector 1",
+    "nameBn": "উত্তরা সেক্টর ১",
+    "thanaId": 4,
+    "latitude": 23.8729,
+    "longitude": 90.3927
+  },
+  {
+    "id": 22,
+    "name": "Uttara Sector 3",
+    "nameBn": "উত্তরা সেক্টর ৩",
+    "thanaId": 4,
+    "latitude": 23.8668,
+    "longitude": 90.3936
+  },
+  {
+    "id": 23,
+    "name": "Uttara Sector 4",
+    "nameBn": "উত্তরা সেক্টর ৪",
+    "thanaId": 4,
+    "latitude": 23.8608,
+    "longitude": 90.396
+  },
+  {
+    "id": 24,
+    "name": "Uttara Sector 6",
+    "nameBn": "উত্তরা সেক্টর ৬",
+    "thanaId": 4,
+    "latitude": 23.8664,
+    "longitude": 90.3977
+  },
+  {
+    "id": 25,
+    "name": "Uttara Sector 7",
+    "nameBn": "উত্তরা সেক্টর ৭",
+    "thanaId": 4,
+    "latitude": 23.8624,
+    "longitude": 90.4023
+  },
+  {
+    "id": 26,
+    "name": "Uttara Sector 10",
+    "nameBn": "উত্তরা সেক্টর ১০",
+    "thanaId": 4,
+    "latitude": 23.8757,
+    "longitude": 90.3914
+  },
+  {
+    "id": 27,
+    "name": "Uttara Sector 11",
+    "nameBn": "উত্তরা সেক্টর ১১",
+    "thanaId": 4,
+    "latitude": 23.8768,
+    "longitude": 90.3996
+  },
+  {
+    "id": 28,
+    "name": "Gulshan-1",
+    "nameBn": "গুলশান-১",
+    "thanaId": 5,
+    "latitude": 23.7806,
+    "longitude": 90.4163
+  },
+  {
+    "id": 29,
+    "name": "Gulshan-2",
+    "nameBn": "গুলশান-২",
+    "thanaId": 5,
+    "latitude": 23.7936,
+    "longitude": 90.4152
+  },
+  {
+    "id": 30,
+    "name": "Niketan",
+    "nameBn": "নিকেতন",
+    "thanaId": 5,
+    "latitude": 23.7746,
+    "longitude": 90.412
+  },
+  {
+    "id": 31,
+    "name": "Baridhara",
+    "nameBn": "বারিধারা",
+    "thanaId": 5,
+    "latitude": 23.7975,
+    "longitude": 90.4238
+  },
+  {
+    "id": 32,
+    "name": "Banani",
+    "nameBn": "বনানী",
+    "thanaId": 6,
+    "latitude": 23.7937,
+    "longitude": 90.4043
+  },
+  {
+    "id": 33,
+    "name": "Banani DOHS",
+    "nameBn": "বনানী ডিওএইচএস",
+    "thanaId": 6,
+    "latitude": 23.807,
+    "longitude": 90.3977
+  },
+  {
+    "id": 34,
+    "name": "Tejgaon",
+    "nameBn": "তেজগাঁও",
+    "thanaId": 7,
+    "latitude": 23.7639,
+    "longitude": 90.3996
+  },
+  {
+    "id": 35,
+    "name": "Farmgate",
+    "nameBn": "ফার্মগেট",
+    "thanaId": 7,
+    "latitude": 23.7579,
+    "longitude": 90.3882
+  },
+  {
+    "id": 36,
+    "name": "Karwan Bazar",
+    "nameBn": "কারওয়ান বাজার",
+    "thanaId": 7,
+    "latitude": 23.7509,
+    "longitude": 90.3928
+  },
+  {
+    "id": 37,
+    "name": "Nakhalpara",
+    "nameBn": "নাখালপাড়া",
+    "thanaId": 7,
+    "latitude": 23.7632,
+    "longitude": 90.393
+  },
+  {
+    "id": 38,
+    "name": "Motijheel",
+    "nameBn": "মতিঝিল",
+    "thanaId": 8,
+    "latitude": 23.733,
+    "longitude": 90.4172
+  },
+  {
+    "id": 39,
+    "name": "Arambagh",
+    "nameBn": "আরামবাগ",
+    "thanaId": 8,
+    "latitude": 23.7358,
+    "longitude": 90.4177
+  },
+  {
+    "id": 40,
+    "name": "Rajarbagh",
+    "nameBn": "রাজারবাগ",
+    "thanaId": 8,
+    "latitude": 23.7398,
+    "longitude": 90.4131
+  },
+  {
+    "id": 41,
+    "name": "Wari",
+    "nameBn": "ওয়ারী",
+    "thanaId": 9,
+    "latitude": 23.7184,
+    "longitude": 90.415
+  },
+  {
+    "id": 42,
+    "name": "Gopibagh",
+    "nameBn": "গোপীবাগ",
+    "thanaId": 9,
+    "latitude": 23.7194,
+    "longitude": 90.424
+  },
+  {
+    "id": 43,
+    "name": "Tikatuli",
+    "nameBn": "টিকাটুলি",
+    "thanaId": 9,
+    "latitude": 23.718,
+    "longitude": 90.4218
+  },
+  {
+    "id": 44,
+    "name": "Lalbagh",
+    "nameBn": "লালবাগ",
+    "thanaId": 10,
+    "latitude": 23.7188,
+    "longitude": 90.3881
+  },
+  {
+    "id": 45,
+    "name": "Azimpur",
+    "nameBn": "আজিমপুর",
+    "thanaId": 10,
+    "latitude": 23.7272,
+    "longitude": 90.3842
+  },
+  {
+    "id": 46,
+    "name": "Chawkbazar",
+    "nameBn": "চকবাজার",
+    "thanaId": 10,
+    "latitude": 23.7195,
+    "longitude": 90.3902
+  },
+  {
+    "id": 47,
+    "name": "Imamganj",
+    "nameBn": "ইমামগঞ্জ",
+    "thanaId": 10,
+    "latitude": 23.7156,
+    "longitude": 90.3938
+  },
+  {
+    "id": 48,
+    "name": "Hazaribagh",
+    "nameBn": "হাজারীবাগ",
+    "thanaId": 11,
+    "latitude": 23.7395,
+    "longitude": 90.3588
+  },
+  {
+    "id": 49,
+    "name": "Rayer Bazar",
+    "nameBn": "রায়ের বাজার",
+    "thanaId": 11,
+    "latitude": 23.7463,
+    "longitude": 90.3538
+  },
+  {
+    "id": 50,
+    "name": "Badda",
+    "nameBn": "বাড্ডা",
+    "thanaId": 17,
+    "latitude": 23.7806,
+    "longitude": 90.4269
+  },
+  {
+    "id": 51,
+    "name": "Aftabnagar",
+    "nameBn": "আফতাবনগর",
+    "thanaId": 17,
+    "latitude": 23.7788,
+    "longitude": 90.4365
+  },
+  {
+    "id": 52,
+    "name": "Satarkul",
+    "nameBn": "সাতারকুল",
+    "thanaId": 17,
+    "latitude": 23.819,
+    "longitude": 90.4388
+  },
+  {
+    "id": 53,
+    "name": "Khilkhet",
+    "nameBn": "খিলক্ষেত",
+    "thanaId": 18,
+    "latitude": 23.8304,
+    "longitude": 90.4209
+  },
+  {
+    "id": 54,
+    "name": "Nikunja",
+    "nameBn": "নিকুঞ্জ",
+    "thanaId": 18,
+    "latitude": 23.8292,
+    "longitude": 90.4215
+  },
+  {
+    "id": 55,
+    "name": "Pallabi",
+    "nameBn": "পল্লবী",
+    "thanaId": 20,
+    "latitude": 23.8224,
+    "longitude": 90.3659
+  },
+  {
+    "id": 56,
+    "name": "Rupnagar",
+    "nameBn": "রূপনগর",
+    "thanaId": 20,
+    "latitude": 23.8234,
+    "longitude": 90.3455
+  },
+  {
+    "id": 57,
+    "name": "East Kafrul",
+    "nameBn": "পূর্ব কাফরুল",
+    "thanaId": 21,
+    "latitude": 23.7938,
+    "longitude": 90.3942
+  },
+  {
+    "id": 58,
+    "name": "Ibrahimpur",
+    "nameBn": "ইব্রাহিমপুর",
+    "thanaId": 21,
+    "latitude": 23.7865,
+    "longitude": 90.3903
+  },
+  {
+    "id": 59,
+    "name": "Agargaon",
+    "nameBn": "আগারগাঁও",
+    "thanaId": 23,
+    "latitude": 23.7789,
+    "longitude": 90.3795
+  },
+  {
+    "id": 60,
+    "name": "Sher-e-Bangla Nagar",
+    "nameBn": "শেরেবাংলা নগর",
+    "thanaId": 23,
+    "latitude": 23.7745,
+    "longitude": 90.382
+  },
+  {
+    "id": 61,
+    "name": "Tongi",
+    "nameBn": "টঙ্গী",
+    "thanaId": 26,
+    "latitude": 23.9,
+    "longitude": 90.4058
+  },
+  {
+    "id": 62,
+    "name": "Joydebpur",
+    "nameBn": "জয়দেবপুর",
+    "thanaId": 25,
+    "latitude": 24.0026,
+    "longitude": 90.4264
+  },
+  {
+    "id": 63,
+    "name": "Narayanganj Sadar",
+    "nameBn": "নারায়ণগঞ্জ সদর",
+    "thanaId": 30,
+    "latitude": 23.6238,
+    "longitude": 90.5
+  },
+  {
+    "id": 64,
+    "name": "Siddhirganj",
+    "nameBn": "সিদ্ধিরগঞ্জ",
+    "thanaId": 31,
+    "latitude": 23.682,
+    "longitude": 90.497
+  },
+  {
+    "id": 65,
+    "name": "Fatullah",
+    "nameBn": "ফতুল্লাহ",
+    "thanaId": 32,
+    "latitude": 23.6105,
+    "longitude": 90.4887
+  },
+  {
+    "id": 66,
+    "name": "Pahartali",
+    "nameBn": "পাহাড়তলী",
+    "thanaId": 36,
+    "latitude": 22.3475,
+    "longitude": 91.783
+  },
+  {
+    "id": 67,
+    "name": "Agrabad",
+    "nameBn": "আগ্রাবাদ",
+    "thanaId": 35,
+    "latitude": 22.3268,
+    "longitude": 91.812
+  },
+  {
+    "id": 68,
+    "name": "CDA Avenue",
+    "nameBn": "সিডিএ এভিনিউ",
+    "thanaId": 35,
+    "latitude": 22.3569,
+    "longitude": 91.8247
+  },
+  {
+    "id": 69,
+    "name": "GEC Circle",
+    "nameBn": "জিইসি সার্কেল",
+    "thanaId": 37,
+    "latitude": 22.3595,
+    "longitude": 91.821
+  },
+  {
+    "id": 70,
+    "name": "Nasirabad",
+    "nameBn": "নাসিরাবাদ",
+    "thanaId": 41,
+    "latitude": 22.3764,
+    "longitude": 91.8268
+  },
+  {
+    "id": 71,
+    "name": "Oxygen",
+    "nameBn": "অক্সিজেন",
+    "thanaId": 41,
+    "latitude": 22.3917,
+    "longitude": 91.8172
+  },
+  {
+    "id": 72,
+    "name": "Khulna Sadar",
+    "nameBn": "খুলনা সদর",
+    "thanaId": 43,
+    "latitude": 22.8456,
+    "longitude": 89.5403
+  },
+  {
+    "id": 73,
+    "name": "Sonadanga",
+    "nameBn": "সোনাডাঙ্গা",
+    "thanaId": 44,
+    "latitude": 22.8125,
+    "longitude": 89.54
+  },
+  {
+    "id": 74,
+    "name": "Boyra",
+    "nameBn": "বয়রা",
+    "thanaId": 44,
+    "latitude": 22.8275,
+    "longitude": 89.551
+  },
+  {
+    "id": 75,
+    "name": "Rajshahi Sadar",
+    "nameBn": "রাজশাহী সদর",
+    "thanaId": 48,
+    "latitude": 24.3745,
+    "longitude": 88.6042
+  },
+  {
+    "id": 76,
+    "name": "Uposhohor",
+    "nameBn": "উপশহর",
+    "thanaId": 49,
+    "latitude": 24.3668,
+    "longitude": 88.6015
+  },
+  {
+    "id": 77,
+    "name": "Sylhet Sadar",
+    "nameBn": "সিলেট সদর",
+    "thanaId": 52,
+    "latitude": 24.8949,
+    "longitude": 91.8687
+  },
+  {
+    "id": 78,
+    "name": "Ambarkhana",
+    "nameBn": "আম্বরখানা",
+    "thanaId": 52,
+    "latitude": 24.903,
+    "longitude": 91.8667
+  },
+  {
+    "id": 79,
+    "name": "Zindabazar",
+    "nameBn": "জিন্দাবাজার",
+    "thanaId": 52,
+    "latitude": 24.8949,
+    "longitude": 91.8687
+  },
+  {
+    "id": 80,
+    "name": "Mymensingh Sadar",
+    "nameBn": "ময়মনসিংহ সদর",
+    "thanaId": 55,
+    "latitude": 24.7471,
+    "longitude": 90.4203
+  },
+  {
+    "id": 81,
+    "name": "Barishal Sadar",
+    "nameBn": "বরিশাল সদর",
+    "thanaId": 57,
+    "latitude": 22.701,
+    "longitude": 90.3535
+  },
+  {
+    "id": 82,
+    "name": "Nathullabad",
+    "nameBn": "নথুল্লাবাদ",
+    "thanaId": 57,
+    "latitude": 22.7127,
+    "longitude": 90.3655
+  },
+  {
+    "id": 83,
+    "name": "Rangpur Sadar",
+    "nameBn": "রংপুর সদর",
+    "thanaId": 59,
+    "latitude": 25.7439,
+    "longitude": 89.2752
+  },
+  {
+    "id": 84,
+    "name": "Dhap",
+    "nameBn": "ধাপ",
+    "thanaId": 59,
+    "latitude": 25.737,
+    "longitude": 89.26
+  }
+]

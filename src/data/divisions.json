@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Barishal",
+    "nameBn": "বরিশাল",
+    "latitude": 22.7,
+    "longitude": 90.366667
+  },
+  {
+    "id": 2,
+    "name": "Chattogram",
+    "nameBn": "চট্টগ্রাম",
+    "latitude": 22.335109,
+    "longitude": 91.834073
+  },
+  {
+    "id": 3,
+    "name": "Dhaka",
+    "nameBn": "ঢাকা",
+    "latitude": 23.7115253,
+    "longitude": 90.4111451
+  },
+  {
+    "id": 4,
+    "name": "Khulna",
+    "nameBn": "খুলনা",
+    "latitude": 22.815774,
+    "longitude": 89.568679
+  },
+  {
+    "id": 5,
+    "name": "Mymensingh",
+    "nameBn": "ময়মনসিংহ",
+    "latitude": 24.743448,
+    "longitude": 90.398384
+  },
+  {
+    "id": 6,
+    "name": "Rajshahi",
+    "nameBn": "রাজশাহী",
+    "latitude": 24.7106,
+    "longitude": 88.9414
+  },
+  {
+    "id": 7,
+    "name": "Rangpur",
+    "nameBn": "রংপুর",
+    "latitude": 25.7558096,
+    "longitude": 89.244462
+  },
+  {
+    "id": 8,
+    "name": "Sylhet",
+    "nameBn": "সিলেট",
+    "latitude": 24.8897956,
+    "longitude": 91.8697894
+  }
+]
