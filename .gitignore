@@ -23,3 +23,6 @@ Thumbs.db
 
 # Test coverage
 coverage/
+
+# DOC md
+UPDATE.md

@@ -1,12 +1,12 @@
-# bd-geo
+# @olism/bd-geo
 
 Bangladesh geographical data and utilities for JavaScript and TypeScript.
 
-[![npm version](https://img.shields.io/npm/v/bd-geo.svg)](https://www.npmjs.com/package/bd-geo)
-[![npm downloads](https://img.shields.io/npm/dm/bd-geo.svg)](https://www.npmjs.com/package/bd-geo)
-[![License](https://img.shields.io/npm/l/bd-geo.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@olism/bd-geo.svg)](https://www.npmjs.com/package/@olism/bd-geo)
+[![npm downloads](https://img.shields.io/npm/dm/@olism/bd-geo.svg)](https://www.npmjs.com/package/@olism/bd-geo)
+[![License](https://img.shields.io/npm/l/@olism/bd-geo.svg)](LICENSE)
 
-`bd-geo` provides structured geographical data for Bangladesh, including divisions, districts, thanas/upazilas, unions, and wards.
+`@olism/bd-geo` provides structured geographical data for Bangladesh, including divisions, districts, thanas/upazilas, unions, and wards.
 
 The package is designed for applications such as address forms, location selectors, delivery systems, real-estate platforms, e-commerce applications, and other Bangladesh-focused software.
 
@@ -15,19 +15,19 @@ The package is designed for applications such as address forms, location selecto
 ### npm
 
 ```bash
-npm install bd-geo
+npm install @olism/bd-geo
 ```
 
 ### Yarn
 
 ```bash
-yarn add bd-geo
+yarn add @olism/bd-geo
 ```
 
 ### pnpm
 
 ```bash
-pnpm add bd-geo
+pnpm add @olism/bd-geo
 ```
 
 ## Geography Hierarchy
@@ -49,7 +49,7 @@ Division
 Import the functions you need:
 
 ```ts
-import { getDivisions, getDistricts, getThanas, getAreas } from "bd-geo";
+import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
 ```
 
 ### Get all divisions
@@ -290,7 +290,7 @@ This can be used for:
 ```tsx
 import { useState } from "react";
 
-import { getDivisions, getDistricts, getThanas, getAreas } from "bd-geo";
+import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
 
 export default function AddressForm() {
   const [divisionId, setDivisionId] = useState<number>();
@@ -364,9 +364,9 @@ export default function AddressForm() {
 
 ---
 
-## Using bd-geo as Database Seed Data
+## Using @olism/bd-geo as Database Seed Data
 
-`bd-geo` can also be used to populate geographical tables in applications built with NestJS, Next.js, Express.js, Prisma, Sequelize, TypeORM, Drizzle, or other database libraries.
+`@olism/bd-geo` can also be used to populate geographical tables in applications built with NestJS, Next.js, Express.js, Prisma, Sequelize, TypeORM, Drizzle, or other database libraries.
 
 The package provides plain JavaScript/TypeScript data, so you can transform it into your database's schema.
 
@@ -422,10 +422,10 @@ areas
 
 ### NestJS + TypeORM
 
-Install `bd-geo`:
+Install `@olism/bd-geo`:
 
 ```bash
-npm install bd-geo
+npm install @olism/bd-geo
 ```
 
 Example seed script:
@@ -433,7 +433,7 @@ Example seed script:
 ```ts
 import { DataSource } from "typeorm";
 
-import { getDivisions, getDistricts, getThanas, getAreas } from "bd-geo";
+import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
 
 import { Division } from "./entities/division.entity";
 import { District } from "./entities/district.entity";
@@ -463,7 +463,7 @@ Run your seed script according to your NestJS/TypeORM setup.
 Install the package:
 
 ```bash
-npm install bd-geo
+npm install @olism/bd-geo
 ```
 
 Example `prisma/seed.ts`:
@@ -471,7 +471,7 @@ Example `prisma/seed.ts`:
 ```ts
 import { PrismaClient } from "@prisma/client";
 
-import { getDivisions, getDistricts, getThanas, getAreas } from "bd-geo";
+import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
 
 const prisma = new PrismaClient();
 
@@ -508,10 +508,10 @@ Make sure your Prisma models use compatible field names and types.
 
 ### Express.js + Sequelize
 
-`bd-geo` works independently of your backend framework, so it can also be used directly with Sequelize.
+`@olism/bd-geo` works independently of your backend framework, so it can also be used directly with Sequelize.
 
 ```ts
-import { getDivisions, getDistricts, getThanas, getAreas } from "bd-geo";
+import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
 
 import { Division } from "./models/division";
 import { District } from "./models/district";
@@ -545,7 +545,7 @@ Then:
 ```ts
 import { PrismaClient } from "@prisma/client";
 
-import { getDivisions, getDistricts, getThanas, getAreas } from "bd-geo";
+import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
 
 const prisma = new PrismaClient();
 
@@ -617,7 +617,7 @@ await prisma.area.createMany({
 });
 ```
 
-The IDs provided by `bd-geo` allow the relationships between the geographical levels to remain consistent.
+The IDs provided by `@olism/bd-geo` allow the relationships between the geographical levels to remain consistent.
 
 ### Using Only One Level
 
@@ -626,7 +626,7 @@ You don't have to seed the entire dataset.
 For example, if your application only needs divisions and districts:
 
 ```ts
-import { getDivisions, getDistricts } from "bd-geo";
+import { getDivisions, getDistricts } from "@olism/bd-geo";
 
 await prisma.division.createMany({
   data: getDivisions(),
@@ -640,12 +640,12 @@ await prisma.district.createMany({
 Or only thanas:
 
 ```ts
-import { getThanas } from "bd-geo";
+import { getThanas } from "@olism/bd-geo";
 
 const thanas = getThanas();
 ```
 
-This makes `bd-geo` useful both as a complete Bangladesh geographical dataset and as a source for specific parts of an application's location system.
+This makes `@olism/bd-geo` useful both as a complete Bangladesh geographical dataset and as a source for specific parts of an application's location system.
 
 ---
 
@@ -702,47 +702,6 @@ getAreas();
 
 More query and search utilities will be added as the package evolves.
 
-## Roadmap
-
-### Data
-
-- [ ] Complete all divisions
-- [ ] Complete all districts
-- [ ] Complete all thanas/upazilas
-- [ ] Complete unions
-- [ ] Complete wards
-- [ ] Verify Bangla names
-- [ ] Verify English names
-- [ ] Verify parent-child relationships
-- [ ] Add reliable coordinates
-- [ ] Improve data consistency
-
-### API
-
-- [ ] `getDivision(id)`
-- [ ] `getDistrict(id)`
-- [ ] `getThana(id)`
-- [ ] `getArea(id)`
-- [ ] `getDistrictsByDivision(id)`
-- [ ] `getThanasByDistrict(id)`
-- [ ] `getAreasByThana(id)`
-- [ ] Search by English name
-- [ ] Search by Bangla name
-- [ ] Hierarchical location lookup
-- [ ] Location validation utilities
-
-### Package
-
-- [ ] Unit tests
-- [ ] API documentation
-- [ ] Better tree-shaking
-- [ ] CommonJS support if needed
-- [x] ESM support
-- [ ] GitHub repository
-- [ ] Continuous integration
-- [ ] Automated package publishing
-- [ ] npm release
-
 ## Data Accuracy
 
 Geographical data is an important part of this package.
@@ -794,7 +753,7 @@ npm test
 
 MIT License
 
-Copyright (c) 2026 bd-geo contributors
+Copyright (c) 2026 @olism/bd-geo contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
