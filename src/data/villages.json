@@ -1,0 +1,754 @@
+[
+  {
+    "id": 1,
+    "name": "Kathgora",
+    "nameBn": "কাঠগড়া",
+    "areaId": 114,
+    "latitude": 23.9333,
+    "longitude": 90.275
+  },
+  {
+    "id": 2,
+    "name": "Dhalpur",
+    "nameBn": "ধলপুর",
+    "areaId": 114,
+    "latitude": 23.928,
+    "longitude": 90.281
+  },
+  {
+    "id": 3,
+    "name": "Nayapara (Ward 1)",
+    "nameBn": "নয়াপাড়া",
+    "areaId": 114,
+    "latitude": 23.925,
+    "longitude": 90.278
+  },
+  {
+    "id": 4,
+    "name": "Kuturia",
+    "nameBn": "কুটুরিয়া",
+    "areaId": 114,
+    "latitude": 23.931,
+    "longitude": 90.285
+  },
+  {
+    "id": 5,
+    "name": "Kandail",
+    "nameBn": "কান্দাইল",
+    "areaId": 114,
+    "latitude": 23.929,
+    "longitude": 90.27
+  },
+  {
+    "id": 6,
+    "name": "Durgapur",
+    "nameBn": "দূর্গাপুর",
+    "areaId": 114,
+    "latitude": 23.921,
+    "longitude": 90.291
+  },
+  {
+    "id": 7,
+    "name": "Johurchhanda",
+    "nameBn": "জহুরছান্দা",
+    "areaId": 114,
+    "latitude": 23.923,
+    "longitude": 90.288
+  },
+  {
+    "id": 8,
+    "name": "Shrikhandia",
+    "nameBn": "শ্রীখন্ডিয়া",
+    "areaId": 114,
+    "latitude": 23.919,
+    "longitude": 90.293
+  },
+  {
+    "id": 9,
+    "name": "Sadarpur",
+    "nameBn": "সদরপুর",
+    "areaId": 114,
+    "latitude": 23.918,
+    "longitude": 90.298
+  },
+  {
+    "id": 10,
+    "name": "East Sadarpur",
+    "nameBn": "পূর্ব সদরপুর",
+    "areaId": 114,
+    "latitude": 23.9175,
+    "longitude": 90.301
+  },
+  {
+    "id": 11,
+    "name": "Aukpara",
+    "nameBn": "আউকপাড়া",
+    "areaId": 114,
+    "latitude": 23.905,
+    "longitude": 90.302
+  },
+  {
+    "id": 12,
+    "name": "Aragaon",
+    "nameBn": "আড়াগাঁও",
+    "areaId": 114,
+    "latitude": 23.903,
+    "longitude": 90.299
+  },
+  {
+    "id": 13,
+    "name": "Dosaid",
+    "nameBn": "দোসাইদ",
+    "areaId": 114,
+    "latitude": 23.907,
+    "longitude": 90.295
+  },
+  {
+    "id": 14,
+    "name": "Belma",
+    "nameBn": "বেলমা",
+    "areaId": 114,
+    "latitude": 23.901,
+    "longitude": 90.292
+  },
+  {
+    "id": 15,
+    "name": "Charabag",
+    "nameBn": "চারাবাগ",
+    "areaId": 114,
+    "latitude": 23.8917,
+    "longitude": 90.325
+  },
+  {
+    "id": 16,
+    "name": "Kumkumari",
+    "nameBn": "কুমকুমারী",
+    "areaId": 114,
+    "latitude": 23.888,
+    "longitude": 90.321
+  },
+  {
+    "id": 17,
+    "name": "Ashulia",
+    "nameBn": "আশুলিয়া",
+    "areaId": 114,
+    "latitude": 23.9083,
+    "longitude": 90.3167
+  },
+  {
+    "id": 18,
+    "name": "Gouripur",
+    "nameBn": "গৌরিপুর",
+    "areaId": 114,
+    "latitude": 23.911,
+    "longitude": 90.312
+  },
+  {
+    "id": 19,
+    "name": "Tongabari",
+    "nameBn": "টংগাবাড়ী",
+    "areaId": 114,
+    "latitude": 23.9125,
+    "longitude": 90.3208
+  },
+  {
+    "id": 20,
+    "name": "Changao",
+    "nameBn": "চাঁনগাও",
+    "areaId": 114,
+    "latitude": 23.899,
+    "longitude": 90.331
+  },
+  {
+    "id": 21,
+    "name": "Mirer Changao",
+    "nameBn": "মীরের চাঁনগাও",
+    "areaId": 114,
+    "latitude": 23.897,
+    "longitude": 90.334
+  },
+  {
+    "id": 22,
+    "name": "Sujabad",
+    "nameBn": "সুজাবাদ",
+    "areaId": 114,
+    "latitude": 23.894,
+    "longitude": 90.329
+  },
+  {
+    "id": 23,
+    "name": "Paragram",
+    "nameBn": "পাড়াগ্রাম",
+    "areaId": 114,
+    "latitude": 23.885,
+    "longitude": 90.338
+  },
+  {
+    "id": 24,
+    "name": "Sadhupara",
+    "nameBn": "সাধুপাড়া",
+    "areaId": 114,
+    "latitude": 23.882,
+    "longitude": 90.335
+  },
+  {
+    "id": 25,
+    "name": "Nayapara (Ward 9)",
+    "nameBn": "নয়াপাড়া",
+    "areaId": 114,
+    "latitude": 23.878,
+    "longitude": 90.342
+  },
+  {
+    "id": 26,
+    "name": "Shawlateki",
+    "nameBn": "শ্যাওলাটেকী",
+    "areaId": 114,
+    "latitude": 23.875,
+    "longitude": 90.345
+  },
+  {
+    "id": 27,
+    "name": "Rostompur",
+    "nameBn": "রুস্তমপুর",
+    "areaId": 114,
+    "latitude": 23.872,
+    "longitude": 90.348
+  },
+  {
+    "id": 28,
+    "name": "Binodpur",
+    "nameBn": "বিনোদপুর",
+    "areaId": 114,
+    "latitude": 23.87,
+    "longitude": 90.35
+  },
+  {
+    "id": 29,
+    "name": "Narayantala",
+    "nameBn": "নারায়নতলা",
+    "areaId": 115,
+    "latitude": 25.1325,
+    "longitude": 91.385
+  },
+  {
+    "id": 30,
+    "name": "Kamarbhita",
+    "nameBn": "কামারভিটা",
+    "areaId": 115,
+    "latitude": 25.135,
+    "longitude": 91.382
+  },
+  {
+    "id": 31,
+    "name": "Kamargaon",
+    "nameBn": "কামারগাঁও",
+    "areaId": 115,
+    "latitude": 25.138,
+    "longitude": 91.38
+  },
+  {
+    "id": 32,
+    "name": "Kandapara",
+    "nameBn": "কান্দাপাড়া",
+    "areaId": 115,
+    "latitude": 25.13,
+    "longitude": 91.388
+  },
+  {
+    "id": 33,
+    "name": "Khaspara",
+    "nameBn": "খাসপাড়া",
+    "areaId": 115,
+    "latitude": 25.128,
+    "longitude": 91.391
+  },
+  {
+    "id": 34,
+    "name": "Bhairabhati",
+    "nameBn": "ভৈরবহাটি",
+    "areaId": 115,
+    "latitude": 25.126,
+    "longitude": 91.394
+  },
+  {
+    "id": 35,
+    "name": "Kashmirpara",
+    "nameBn": "কাশ্মীরপাড়া",
+    "areaId": 115,
+    "latitude": 25.124,
+    "longitude": 91.397
+  },
+  {
+    "id": 36,
+    "name": "Comillapara",
+    "nameBn": "কুমিল্লাপাড়া",
+    "areaId": 115,
+    "latitude": 25.122,
+    "longitude": 91.4
+  },
+  {
+    "id": 37,
+    "name": "Lambahati",
+    "nameBn": "লম্বাহাটি",
+    "areaId": 115,
+    "latitude": 25.12,
+    "longitude": 91.403
+  },
+  {
+    "id": 38,
+    "name": "Kathalbari",
+    "nameBn": "কাঠালবাড়ী",
+    "areaId": 115,
+    "latitude": 25.118,
+    "longitude": 91.406
+  },
+  {
+    "id": 39,
+    "name": "Mirerchar",
+    "nameBn": "মীরেরচর",
+    "areaId": 115,
+    "latitude": 25.115,
+    "longitude": 91.409
+  },
+  {
+    "id": 40,
+    "name": "Mangalkata",
+    "nameBn": "মঙ্গলকাটা",
+    "areaId": 115,
+    "latitude": 25.112,
+    "longitude": 91.412
+  },
+  {
+    "id": 41,
+    "name": "Nurujpara",
+    "nameBn": "নুরুজপাড়া",
+    "areaId": 115,
+    "latitude": 25.11,
+    "longitude": 91.415
+  },
+  {
+    "id": 42,
+    "name": "Jahangirnagar",
+    "nameBn": "জাহাঙ্গীরনগর",
+    "areaId": 115,
+    "latitude": 25.108,
+    "longitude": 91.418
+  },
+  {
+    "id": 43,
+    "name": "Dhalairpar",
+    "nameBn": "ধলাইরপাড়",
+    "areaId": 115,
+    "latitude": 25.105,
+    "longitude": 91.421
+  },
+  {
+    "id": 44,
+    "name": "Durlabhpur",
+    "nameBn": "দুলর্ভপুর",
+    "areaId": 115,
+    "latitude": 25.102,
+    "longitude": 91.424
+  },
+  {
+    "id": 45,
+    "name": "Ampara",
+    "nameBn": "আমপাড়া",
+    "areaId": 115,
+    "latitude": 25.1,
+    "longitude": 91.427
+  },
+  {
+    "id": 46,
+    "name": "Rajanagar",
+    "nameBn": "রাজানগর",
+    "areaId": 115,
+    "latitude": 25.098,
+    "longitude": 91.43
+  },
+  {
+    "id": 47,
+    "name": "Ghasigaon",
+    "nameBn": "ঘাসিগাঁও",
+    "areaId": 115,
+    "latitude": 25.095,
+    "longitude": 91.433
+  },
+  {
+    "id": 48,
+    "name": "Fenibil",
+    "nameBn": "ফেনিবিল",
+    "areaId": 115,
+    "latitude": 25.092,
+    "longitude": 91.436
+  },
+  {
+    "id": 49,
+    "name": "Dolura",
+    "nameBn": "ডলুরা",
+    "areaId": 115,
+    "latitude": 25.09,
+    "longitude": 91.439
+  },
+  {
+    "id": 50,
+    "name": "Konapara",
+    "nameBn": "কোনাপাড়া",
+    "areaId": 115,
+    "latitude": 25.088,
+    "longitude": 91.442
+  },
+  {
+    "id": 51,
+    "name": "Kaiyargaon",
+    "nameBn": "কাইয়ারগাঁও",
+    "areaId": 115,
+    "latitude": 25.085,
+    "longitude": 91.445
+  },
+  {
+    "id": 52,
+    "name": "Jharjhariya",
+    "nameBn": "ঝরঝরিয়া",
+    "areaId": 115,
+    "latitude": 25.082,
+    "longitude": 91.448
+  },
+  {
+    "id": 53,
+    "name": "Naidar Khamar",
+    "nameBn": "নৈদার খামার",
+    "areaId": 115,
+    "latitude": 25.08,
+    "longitude": 91.451
+  },
+  {
+    "id": 54,
+    "name": "Islampur",
+    "nameBn": "ইসলামপুর",
+    "areaId": 115,
+    "latitude": 25.078,
+    "longitude": 91.454
+  },
+  {
+    "id": 55,
+    "name": "Malaigaon",
+    "nameBn": "মালাইগাঁও",
+    "areaId": 115,
+    "latitude": 25.075,
+    "longitude": 91.457
+  },
+  {
+    "id": 56,
+    "name": "Khagergaon",
+    "nameBn": "খাগেরগাঁও",
+    "areaId": 115,
+    "latitude": 25.072,
+    "longitude": 91.46
+  },
+  {
+    "id": 57,
+    "name": "Aimagaon",
+    "nameBn": "আইমাগাঁও",
+    "areaId": 115,
+    "latitude": 25.07,
+    "longitude": 91.463
+  },
+  {
+    "id": 58,
+    "name": "Puran Gudigaon",
+    "nameBn": "পুরান গুদিগাঁও",
+    "areaId": 115,
+    "latitude": 25.068,
+    "longitude": 91.466
+  },
+  {
+    "id": 59,
+    "name": "Nutan Gudigaon",
+    "nameBn": "নতুন গুদিগাঁও",
+    "areaId": 115,
+    "latitude": 25.065,
+    "longitude": 91.469
+  },
+  {
+    "id": 60,
+    "name": "Maijhail",
+    "nameBn": "মাইঝাইল",
+    "areaId": 116,
+    "latitude": 23.945,
+    "longitude": 90.26
+  },
+  {
+    "id": 61,
+    "name": "Paichhail",
+    "nameBn": "পাইছাইল",
+    "areaId": 116,
+    "latitude": 23.948,
+    "longitude": 90.263
+  },
+  {
+    "id": 62,
+    "name": "Unail",
+    "nameBn": "উনাইল",
+    "areaId": 116,
+    "latitude": 23.952,
+    "longitude": 90.265
+  },
+  {
+    "id": 63,
+    "name": "Gopalbari",
+    "nameBn": "গোপালবাড়ী",
+    "areaId": 116,
+    "latitude": 23.955,
+    "longitude": 90.268
+  },
+  {
+    "id": 64,
+    "name": "Dhamsona",
+    "nameBn": "ধামসোনা",
+    "areaId": 116,
+    "latitude": 23.96,
+    "longitude": 90.27
+  },
+  {
+    "id": 65,
+    "name": "Subandi",
+    "nameBn": "সুবন্দী",
+    "areaId": 116,
+    "latitude": 23.963,
+    "longitude": 90.273
+  },
+  {
+    "id": 66,
+    "name": "Bayanbari",
+    "nameBn": "বায়নবাড়ী",
+    "areaId": 116,
+    "latitude": 23.965,
+    "longitude": 90.275
+  },
+  {
+    "id": 67,
+    "name": "Kalartek",
+    "nameBn": "কালারটেক",
+    "areaId": 116,
+    "latitude": 23.968,
+    "longitude": 90.278
+  },
+  {
+    "id": 68,
+    "name": "Talteki",
+    "nameBn": "তালটেকি",
+    "areaId": 116,
+    "latitude": 23.97,
+    "longitude": 90.28
+  },
+  {
+    "id": 69,
+    "name": "Natun Nagar",
+    "nameBn": "নতুন নগর",
+    "areaId": 116,
+    "latitude": 23.972,
+    "longitude": 90.282
+  },
+  {
+    "id": 70,
+    "name": "Konda",
+    "nameBn": "কন্ডা",
+    "areaId": 116,
+    "latitude": 23.975,
+    "longitude": 90.285
+  },
+  {
+    "id": 71,
+    "name": "Chhanteki",
+    "nameBn": "ছনটেকি",
+    "areaId": 116,
+    "latitude": 23.978,
+    "longitude": 90.288
+  },
+  {
+    "id": 72,
+    "name": "Noyatek",
+    "nameBn": "নয়াটেক",
+    "areaId": 116,
+    "latitude": 23.98,
+    "longitude": 90.29
+  },
+  {
+    "id": 73,
+    "name": "Madhupur",
+    "nameBn": "মধুপুর",
+    "areaId": 116,
+    "latitude": 23.982,
+    "longitude": 90.292
+  },
+  {
+    "id": 74,
+    "name": "Bijoy Nagar",
+    "nameBn": "বিজয় নগর",
+    "areaId": 116,
+    "latitude": 23.984,
+    "longitude": 90.294
+  },
+  {
+    "id": 75,
+    "name": "Faruk Nagar",
+    "nameBn": "ফারুক নগর",
+    "areaId": 116,
+    "latitude": 23.986,
+    "longitude": 90.296
+  },
+  {
+    "id": 76,
+    "name": "Peydartek",
+    "nameBn": "পেয়দারটেক",
+    "areaId": 116,
+    "latitude": 23.988,
+    "longitude": 90.298
+  },
+  {
+    "id": 77,
+    "name": "Bortek",
+    "nameBn": "বড়টেক",
+    "areaId": 116,
+    "latitude": 23.99,
+    "longitude": 90.3
+  },
+  {
+    "id": 78,
+    "name": "Bhadail",
+    "nameBn": "ভাদাইল",
+    "areaId": 116,
+    "latitude": 23.942,
+    "longitude": 90.275
+  },
+  {
+    "id": 79,
+    "name": "Pabnartek",
+    "nameBn": "পাবনারটেক",
+    "areaId": 116,
+    "latitude": 23.94,
+    "longitude": 90.278
+  },
+  {
+    "id": 80,
+    "name": "Baipail",
+    "nameBn": "বাইপাইল",
+    "areaId": 116,
+    "latitude": 23.935,
+    "longitude": 90.268
+  },
+  {
+    "id": 81,
+    "name": "South Gazirchat",
+    "nameBn": "দক্ষিণ গাজীরচট",
+    "areaId": 116,
+    "latitude": 23.932,
+    "longitude": 90.27
+  },
+  {
+    "id": 82,
+    "name": "North Gazirchat (Ambagan & Bhuiyan Para)",
+    "nameBn": "উত্তর গাজীরচট (আমবাগান ও ভূঁইয়া পাড়া)",
+    "areaId": 116,
+    "latitude": 23.938,
+    "longitude": 90.272
+  },
+  {
+    "id": 83,
+    "name": "Palashbari",
+    "nameBn": "পলাশবাড়ী",
+    "areaId": 116,
+    "latitude": 23.925,
+    "longitude": 90.26
+  },
+  {
+    "id": 84,
+    "name": "North Dendabor",
+    "nameBn": "উত্তর ডেন্ডাবর",
+    "areaId": 116,
+    "latitude": 23.922,
+    "longitude": 90.262
+  },
+  {
+    "id": 85,
+    "name": "Kaichabari",
+    "nameBn": "কাইচাবাড়ী",
+    "areaId": 116,
+    "latitude": 23.92,
+    "longitude": 90.265
+  },
+  {
+    "id": 86,
+    "name": "Dendabor",
+    "nameBn": "ডেন্ডাবর",
+    "areaId": 116,
+    "latitude": 23.918,
+    "longitude": 90.263
+  },
+  {
+    "id": 87,
+    "name": "Palli Bidyut",
+    "nameBn": "পল্লীবিদ্যুৎ",
+    "areaId": 116,
+    "latitude": 23.915,
+    "longitude": 90.261
+  },
+  {
+    "id": 88,
+    "name": "Batantek",
+    "nameBn": "বাতানটেক",
+    "areaId": 116,
+    "latitude": 23.912,
+    "longitude": 90.259
+  },
+  {
+    "id": 89,
+    "name": "Bilashpur",
+    "nameBn": "বিলাসপুর",
+    "areaId": 116,
+    "latitude": 23.91,
+    "longitude": 90.257
+  },
+  {
+    "id": 90,
+    "name": "Gochartek",
+    "nameBn": "গোচারটেক",
+    "areaId": 116,
+    "latitude": 23.908,
+    "longitude": 90.255
+  },
+  {
+    "id": 91,
+    "name": "Dogartoli",
+    "nameBn": "ডগরতলী",
+    "areaId": 116,
+    "latitude": 23.905,
+    "longitude": 90.252
+  },
+  {
+    "id": 92,
+    "name": "Nalam",
+    "nameBn": "নলাম",
+    "areaId": 116,
+    "latitude": 23.902,
+    "longitude": 90.25
+  },
+  {
+    "id": 93,
+    "name": "Bashbari",
+    "nameBn": "বাঁশবাড়ী",
+    "areaId": 116,
+    "latitude": 23.9,
+    "longitude": 90.248
+  },
+  {
+    "id": 94,
+    "name": "Enayetpur",
+    "nameBn": "এনায়েতপুর",
+    "areaId": 116,
+    "latitude": 23.898,
+    "longitude": 90.246
+  }
+]

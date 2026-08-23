@@ -1107,6 +1107,15 @@
     "longitude": 90.1425
   },
   {
+    "id": 124,
+    "name": "Joydebpur",
+    "nameBn": "জয়দেবপুর",
+    "upazilaId": 25,
+    "type": "ward",
+    "latitude": 24.0026,
+    "longitude": 90.4264
+  },
+  {
     "id": 125,
     "name": "Board Bazar",
     "nameBn": "বোর্ড বাজার",
@@ -1347,7 +1356,16 @@
     "upazilaId": 240,
     "type": "ward",
     "latitude": 21.4,
-    "longitude": 92
+    "longitude": 92.0
+  },
+  {
+    "id": 152,
+    "name": "Boyra",
+    "nameBn": "বয়রা",
+    "upazilaId": 44,
+    "type": "ward",
+    "latitude": 22.8275,
+    "longitude": 89.551
   },
   {
     "id": 153,
@@ -1377,6 +1395,15 @@
     "longitude": 89.502
   },
   {
+    "id": 156,
+    "name": "Uposhohor",
+    "nameBn": "উপশহর",
+    "upazilaId": 49,
+    "type": "ward",
+    "latitude": 24.3668,
+    "longitude": 88.6015
+  },
+  {
     "id": 157,
     "name": "Shaheb Bazar",
     "nameBn": "সাহেব বাজার",
@@ -1393,6 +1420,24 @@
     "type": "ward",
     "latitude": 24.3736,
     "longitude": 88.6017
+  },
+  {
+    "id": 159,
+    "name": "Zindabazar",
+    "nameBn": "জিন্দাবাজার",
+    "upazilaId": 52,
+    "type": "ward",
+    "latitude": 24.8949,
+    "longitude": 91.8687
+  },
+  {
+    "id": 160,
+    "name": "Ambarkhana",
+    "nameBn": "আম্বরখানা",
+    "upazilaId": 52,
+    "type": "ward",
+    "latitude": 24.903,
+    "longitude": 91.8667
   },
   {
     "id": 161,
@@ -1413,6 +1458,15 @@
     "longitude": 91.8514
   },
   {
+    "id": 163,
+    "name": "Nathullabad",
+    "nameBn": "নথুল্লাবাদ",
+    "upazilaId": 57,
+    "type": "ward",
+    "latitude": 22.7127,
+    "longitude": 90.3655
+  },
+  {
     "id": 164,
     "name": "Rupatoli",
     "nameBn": "রূপাতলী",
@@ -1420,6 +1474,15 @@
     "type": "ward",
     "latitude": 22.7089,
     "longitude": 90.3608
+  },
+  {
+    "id": 165,
+    "name": "Dhap",
+    "nameBn": "ধাপ",
+    "upazilaId": 59,
+    "type": "ward",
+    "latitude": 25.737,
+    "longitude": 89.26
   },
   {
     "id": 166,
