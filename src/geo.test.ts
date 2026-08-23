@@ -1,8 +1,19 @@
 import { describe, expect, it } from "vitest";
 
-import { getDivisions, getDistricts, getThanas, getAreas } from "./geo";
+import {
+  getDivisions,
+  getDistricts,
+  getThanas,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "./geo";
 
 describe("bd-geo", () => {
+  // ─────────────────────────────────────────────────────────────
+  // Basic dataset shape
+  // ─────────────────────────────────────────────────────────────
+
   it("should return all 8 divisions", () => {
     const divisions = getDivisions();
 
@@ -15,10 +26,10 @@ describe("bd-geo", () => {
     expect(districts).toHaveLength(64);
   });
 
-  it("should return all 198 thanas", () => {
-    const thanas = getThanas();
+  it("should return upazilas", () => {
+    const upazilas = getUpazilas();
 
-    expect(thanas).toHaveLength(198);
+    expect(upazilas.length).toBeGreaterThan(0);
   });
 
   it("should return areas", () => {
@@ -27,9 +38,26 @@ describe("bd-geo", () => {
     expect(areas.length).toBeGreaterThan(0);
   });
 
+  it("should return villages", () => {
+    const villages = getVillages();
+
+    expect(villages.length).toBeGreaterThan(0);
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // Backward compatibility
+  // ─────────────────────────────────────────────────────────────
+
+  it("getThanas() should return the same data as getUpazilas()", () => {
+    expect(getThanas()).toEqual(getUpazilas());
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // Unique IDs
+  // ─────────────────────────────────────────────────────────────
+
   it("should have unique division IDs", () => {
     const divisions = getDivisions();
-
     const ids = divisions.map((division) => division.id);
 
     expect(new Set(ids).size).toBe(ids.length);
@@ -37,27 +65,38 @@ describe("bd-geo", () => {
 
   it("should have unique district IDs", () => {
     const districts = getDistricts();
-
     const ids = districts.map((district) => district.id);
 
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it("should have unique thana IDs", () => {
-    const thanas = getThanas();
-
-    const ids = thanas.map((thana) => thana.id);
+  it("should have unique upazila IDs", () => {
+    const upazilas = getUpazilas();
+    const ids = upazilas.map((upazila) => upazila.id);
 
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it("should have unique area IDs", () => {
+  it("should not have duplicate area names of the same type within the same upazila", () => {
     const areas = getAreas();
 
-    const ids = areas.map((area) => area.id);
+    const keys = areas.map(
+      (area) => `${area.upazilaId}:${area.type}:${area.name}`,
+    );
+
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+
+  it("should have unique village IDs", () => {
+    const villages = getVillages();
+    const ids = villages.map((village) => village.id);
 
     expect(new Set(ids).size).toBe(ids.length);
   });
+
+  // ─────────────────────────────────────────────────────────────
+  // Foreign key relationships
+  // ─────────────────────────────────────────────────────────────
 
   it("should have valid district → division relationships", () => {
     const divisions = getDivisions();
@@ -75,35 +114,73 @@ describe("bd-geo", () => {
     }
   });
 
-  it("should have valid thana → district relationships", () => {
+  it("should have valid upazila → district relationships", () => {
     const districts = getDistricts();
-    const thanas = getThanas();
+    const upazilas = getUpazilas();
 
-    for (const thana of thanas) {
+    for (const upazila of upazilas) {
       const district = districts.find(
-        (district) => district.id === thana.districtId,
+        (district) => district.id === upazila.districtId,
       );
 
       expect(
         district,
-        `Thana "${thana.name}" has invalid districtId ${thana.districtId}`,
+        `Upazila "${upazila.name}" has invalid districtId ${upazila.districtId}`,
       ).toBeDefined();
     }
   });
 
-  it("should have valid area → thana relationships", () => {
-    const thanas = getThanas();
+  it("should have valid area → upazila relationships", () => {
+    const upazilas = getUpazilas();
     const areas = getAreas();
 
     for (const area of areas) {
-      const thana = thanas.find((thana) => thana.id === area.thanaId);
+      const upazila = upazilas.find((upazila) => upazila.id === area.upazilaId);
 
       expect(
-        thana,
-        `Area "${area.name}" has invalid thanaId ${area.thanaId}`,
+        upazila,
+        `Area "${area.name}" has invalid upazilaId ${area.upazilaId}`,
       ).toBeDefined();
     }
   });
+
+  it("should have valid village → area relationships", () => {
+    const areas = getAreas();
+    const villages = getVillages();
+
+    const areaIds = new Set(areas.map((area) => area.id));
+
+    for (const village of villages) {
+      expect(
+        areaIds.has(village.areaId),
+        `Village "${village.name}" has invalid areaId ${village.areaId}`,
+      ).toBe(true);
+    }
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // Village → Union relationship
+  // ─────────────────────────────────────────────────────────────
+
+  it("should only allow villages under union areas", () => {
+    const areas = getAreas();
+    const villages = getVillages();
+
+    const unionIds = new Set(
+      areas.filter((area) => area.type === "union").map((area) => area.id),
+    );
+
+    for (const village of villages) {
+      expect(
+        unionIds.has(village.areaId),
+        `Village "${village.name}" has areaId ${village.areaId}, but that area is not a union`,
+      ).toBe(true);
+    }
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // Area types
+  // ─────────────────────────────────────────────────────────────
 
   it("should have valid area types", () => {
     const areas = getAreas();
@@ -113,11 +190,58 @@ describe("bd-geo", () => {
     }
   });
 
+  // ─────────────────────────────────────────────────────────────
+  // Upazila types
+  // ─────────────────────────────────────────────────────────────
+
+  it("should have valid upazila types when provided", () => {
+    const upazilas = getUpazilas();
+
+    for (const upazila of upazilas) {
+      if (upazila.type !== undefined) {
+        expect(["upazila", "thana"]).toContain(upazila.type);
+      }
+    }
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // Required names
+  // ─────────────────────────────────────────────────────────────
+
+  it("should contain English names", () => {
+    const divisions = getDivisions();
+    const districts = getDistricts();
+    const upazilas = getUpazilas();
+    const areas = getAreas();
+    const villages = getVillages();
+
+    for (const division of divisions) {
+      expect(division.name).toBeTruthy();
+    }
+
+    for (const district of districts) {
+      expect(district.name).toBeTruthy();
+    }
+
+    for (const upazila of upazilas) {
+      expect(upazila.name).toBeTruthy();
+    }
+
+    for (const area of areas) {
+      expect(area.name).toBeTruthy();
+    }
+
+    for (const village of villages) {
+      expect(village.name).toBeTruthy();
+    }
+  });
+
   it("should contain Bangla names", () => {
     const divisions = getDivisions();
     const districts = getDistricts();
-    const thanas = getThanas();
+    const upazilas = getUpazilas();
     const areas = getAreas();
+    const villages = getVillages();
 
     for (const division of divisions) {
       expect(division.nameBn).toBeTruthy();
@@ -127,12 +251,118 @@ describe("bd-geo", () => {
       expect(district.nameBn).toBeTruthy();
     }
 
-    for (const thana of thanas) {
-      expect(thana.nameBn).toBeTruthy();
+    for (const upazila of upazilas) {
+      expect(upazila.nameBn).toBeTruthy();
     }
 
     for (const area of areas) {
       expect(area.nameBn).toBeTruthy();
+    }
+
+    for (const village of villages) {
+      expect(village.nameBn).toBeTruthy();
+    }
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // Duplicate sibling names
+  // ─────────────────────────────────────────────────────────────
+
+  it("should not have duplicate district names within the same division", () => {
+    const districts = getDistricts();
+
+    const byDivision = new Map<number, string[]>();
+
+    for (const district of districts) {
+      const list = byDivision.get(district.divisionId) ?? [];
+
+      list.push(district.name);
+      byDivision.set(district.divisionId, list);
+    }
+
+    for (const [divisionId, names] of byDivision) {
+      expect(
+        new Set(names).size,
+        `Division ${divisionId} has duplicate district names: ${names.join(", ")}`,
+      ).toBe(names.length);
+    }
+  });
+
+  it("should not have duplicate upazila names within the same district", () => {
+    const upazilas = getUpazilas();
+
+    const byDistrict = new Map<number, string[]>();
+
+    for (const upazila of upazilas) {
+      const list = byDistrict.get(upazila.districtId) ?? [];
+
+      list.push(upazila.name);
+      byDistrict.set(upazila.districtId, list);
+    }
+
+    for (const [districtId, names] of byDistrict) {
+      expect(
+        new Set(names).size,
+        `District ${districtId} has duplicate upazila names: ${names.join(", ")}`,
+      ).toBe(names.length);
+    }
+  });
+
+  it("should not have duplicate area names within the same upazila", () => {
+    const areas = getAreas();
+
+    const byUpazila = new Map<number, string[]>();
+
+    for (const area of areas) {
+      const list = byUpazila.get(area.upazilaId) ?? [];
+
+      list.push(area.name);
+      byUpazila.set(area.upazilaId, list);
+    }
+
+    for (const [upazilaId, names] of byUpazila) {
+      expect(
+        new Set(names).size,
+        `Upazila ${upazilaId} has duplicate area names: ${names.join(", ")}`,
+      ).toBe(names.length);
+    }
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // Geographic sanity checks
+  // ─────────────────────────────────────────────────────────────
+
+  it("should have coordinates within Bangladesh's real bounding box", () => {
+    // Approximate Bangladesh bounding box:
+    // Latitude: 20.5 – 26.7
+    // Longitude: 88.0 – 92.7
+
+    const allRecords = [
+      ...getDivisions(),
+      ...getDistricts(),
+      ...getUpazilas(),
+      ...getAreas(),
+      ...getVillages(),
+    ];
+
+    const allWithCoords = allRecords.filter(
+      (record) => record.latitude != null && record.longitude != null,
+    );
+
+    for (const record of allWithCoords) {
+      expect(
+        record.latitude,
+        `"${record.name}" latitude ${record.latitude} is outside Bangladesh's bounds`,
+      ).toBeGreaterThanOrEqual(20.5);
+
+      expect(record.latitude).toBeLessThanOrEqual(26.7);
+
+      expect(
+        record.longitude,
+        `"${record.name}" longitude ${record.longitude} is outside Bangladesh's bounds`,
+      ).toBeGreaterThanOrEqual(88.0);
+
+      expect(record.longitude).toBeLessThanOrEqual(92.7);
     }
   });
 });

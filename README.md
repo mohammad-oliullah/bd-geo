@@ -6,9 +6,38 @@ Bangladesh geographical data and utilities for JavaScript and TypeScript.
 [![npm downloads](https://img.shields.io/npm/dm/@olism/bd-geo.svg)](https://www.npmjs.com/package/@olism/bd-geo)
 [![License](https://img.shields.io/npm/l/@olism/bd-geo.svg)](LICENSE)
 
-`@olism/bd-geo` provides structured geographical data for Bangladesh, including divisions, districts, thanas/upazilas, unions, and wards.
+> [!IMPORTANT]
+> **Always use the latest version of `@olism/bd-geo`.**
+>
+> This package is actively maintained and geographical data is continuously being improved and expanded.
+> New releases may include updated geographical data, additional locations, corrections, and API improvements.
+>
+> Check the latest version on [npm](https://www.npmjs.com/package/@olism/bd-geo) before installing or upgrading.
 
-The package is designed for applications such as address forms, location selectors, delivery systems, real-estate platforms, e-commerce applications, and other Bangladesh-focused software.
+`@olism/bd-geo` provides structured geographical data for Bangladesh, including:
+
+- Divisions
+- Districts
+- Upazilas / Thanas
+- Unions
+- Wards
+- Villages
+
+The package is designed for applications such as:
+
+- Address forms
+- Location selectors
+- Delivery systems
+- E-commerce applications
+- Real-estate platforms
+- Job platforms
+- User profiles
+- Registration forms
+- Location filters
+- Bangladesh-focused maps
+- Database seed data
+
+---
 
 ## Installation
 
@@ -30,34 +59,75 @@ yarn add @olism/bd-geo
 pnpm add @olism/bd-geo
 ```
 
+---
+
 ## Geography Hierarchy
+
+The geographical structure provided by the package is:
 
 ```text
 Division
    │
    └── District
-         │
-         └── Thana / Upazila
-                  │
-                  └── Area
-                       ├── Union
-                       └── Ward
+          │
+          └── Upazila / Thana
+                    │
+                    └── Area
+                         ├── Union
+                         │     └── Village
+                         │
+                         └── Ward
 ```
 
-## Usage
+### Important
+
+- `Upazila` and `Thana` are represented by the same geographical level.
+- `Area` can be either a `union` or a `ward`.
+- A `Village` belongs to an `Area` whose type is `union`.
+- Villages do not belong directly to wards.
+
+---
+
+# Quick Start
 
 Import the functions you need:
 
 ```ts
-import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
+import {
+  getDivisions,
+  getDistricts,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "@olism/bd-geo";
 ```
 
-### Get all divisions
+Then use them directly:
 
 ```ts
 const divisions = getDivisions();
+const districts = getDistricts();
+const upazilas = getUpazilas();
+const areas = getAreas();
+const villages = getVillages();
+```
 
-console.log(divisions);
+---
+
+# API
+
+## `getDivisions()`
+
+Returns all available Bangladesh divisions.
+
+```ts
+const divisions = getDivisions();
+```
+
+Return type:
+
+```ts
+Division[]
 ```
 
 Example:
@@ -77,51 +147,11 @@ Example:
 ];
 ```
 
-### Get all districts
-
-```ts
-const districts = getDistricts();
-
-console.log(districts);
-```
-
-### Get all thanas / upazilas
-
-```ts
-const thanas = getThanas();
-
-console.log(thanas);
-```
-
-### Get all areas
-
-```ts
-const areas = getAreas();
-
-console.log(areas);
-```
-
-## API
-
-### `getDivisions()`
-
-Returns all Bangladesh divisions.
-
-```ts
-const divisions = getDivisions();
-```
-
-Return type:
-
-```ts
-Division[]
-```
-
 ---
 
-### `getDistricts()`
+## `getDistricts()`
 
-Returns all Bangladesh districts.
+Returns all available Bangladesh districts.
 
 ```ts
 const districts = getDistricts();
@@ -133,27 +163,101 @@ Return type:
 District[]
 ```
 
----
-
-### `getThanas()`
-
-Returns all thanas/upazilas.
+Example:
 
 ```ts
-const thanas = getThanas();
+[
+  {
+    id: 1,
+    name: "Dhaka",
+    nameBn: "ঢাকা",
+    divisionId: 3,
+  },
+];
+```
+
+---
+
+## `getUpazilas()`
+
+Returns all available upazilas.
+
+```ts
+const upazilas = getUpazilas();
 ```
 
 Return type:
 
 ```ts
-Thana[]
+Upazila[]
+```
+
+Example:
+
+```ts
+[
+  {
+    id: 1,
+    name: "Mirpur",
+    nameBn: "মিরপুর",
+    districtId: 1,
+    type: "thana",
+  },
+];
 ```
 
 ---
 
-### `getAreas()`
+## `getThanas()`
+
+> [!WARNING]
+> `getThanas()` is deprecated.
+>
+> Use `getUpazilas()` for new applications.
+
+```ts
+const thanas = getThanas();
+```
+
+It returns the same data as:
+
+```ts
+getUpazilas();
+```
+
+This function is kept for backward compatibility.
+
+### Recommended
+
+```ts
+const upazilas = getUpazilas();
+```
+
+### Legacy
+
+```ts
+const thanas = getThanas();
+```
+
+---
+
+## `getAreas()`
 
 Returns all available areas.
+
+An area can be either:
+
+```ts
+"union";
+```
+
+or:
+
+```ts
+"ward";
+```
+
+Example:
 
 ```ts
 const areas = getAreas();
@@ -165,9 +269,62 @@ Return type:
 Area[]
 ```
 
-## TypeScript Types
+Example:
 
-### Division
+```ts
+[
+  {
+    id: 1,
+    name: "Mirpur-1",
+    nameBn: "মিরপুর-১",
+    upazilaId: 1,
+    type: "ward",
+  },
+];
+```
+
+---
+
+## `getVillages()`
+
+Returns all available villages.
+
+```ts
+const villages = getVillages();
+```
+
+Return type:
+
+```ts
+Village[]
+```
+
+Example:
+
+```ts
+[
+  {
+    id: 1,
+    name: "Example Village",
+    nameBn: "উদাহরণ গ্রাম",
+    areaId: 10,
+  },
+];
+```
+
+A village's `areaId` references an area where:
+
+```ts
+area.type === "union";
+```
+
+---
+
+# TypeScript Types
+
+The package exports TypeScript types for all geographical levels.
+
+## Division
 
 ```ts
 export interface Division {
@@ -179,7 +336,9 @@ export interface Division {
 }
 ```
 
-### District
+---
+
+## District
 
 ```ts
 export interface District {
@@ -192,22 +351,39 @@ export interface District {
 }
 ```
 
-### Thana
+---
 
-A thana and upazila are represented by the same geographical level in this package.
+## Upazila
+
+An upazila and thana are represented by the same geographical level.
 
 ```ts
-export interface Thana {
+export interface Upazila {
   id: number;
   name: string;
   nameBn: string;
   districtId: number;
+  type?: "upazila" | "thana";
   latitude?: number;
   longitude?: number;
 }
 ```
 
-### Area
+The optional `type` field can distinguish between:
+
+```ts
+"upazila";
+```
+
+and:
+
+```ts
+"thana";
+```
+
+---
+
+## Area
 
 ```ts
 export type AreaType = "union" | "ward";
@@ -216,14 +392,33 @@ export interface Area {
   id: number;
   name: string;
   nameBn: string;
-  thanaId: number;
+  upazilaId: number;
   type: AreaType;
   latitude?: number;
   longitude?: number;
 }
 ```
 
-## Relationship IDs
+---
+
+## Village
+
+```ts
+export interface Village {
+  id: number;
+  name: string;
+  nameBn: string;
+  areaId: number;
+  latitude?: number;
+  longitude?: number;
+}
+```
+
+A village must reference an `Area` whose type is `union`.
+
+---
+
+# Relationship IDs
 
 Each geographical level references its parent.
 
@@ -234,20 +429,31 @@ Division.id
 ```
 
 ```text
-Thana.districtId
+Upazila.districtId
         ↓
 District.id
 ```
 
 ```text
-Area.thanaId
+Area.upazilaId
         ↓
-Thana.id
+Upazila.id
 ```
 
-For example:
+```text
+Village.areaId
+        ↓
+Area.id
+```
+
+## Example
+
+Find the division of a district:
 
 ```ts
+const districts = getDistricts();
+const divisions = getDivisions();
+
 const district = districts.find((district) => district.id === 1);
 
 const division = divisions.find(
@@ -255,47 +461,72 @@ const division = divisions.find(
 );
 ```
 
-## Bangladesh Address Example
+---
 
-You can use the package to build cascading address selectors:
+# Cascading Address Selector
+
+The package can easily be used to create cascading location selectors.
 
 ```ts
+import {
+  getDivisions,
+  getDistricts,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "@olism/bd-geo";
+
 const divisions = getDivisions();
 
 const districts = getDistricts().filter(
   (district) => district.divisionId === selectedDivisionId,
 );
 
-const thanas = getThanas().filter(
-  (thana) => thana.districtId === selectedDistrictId,
+const upazilas = getUpazilas().filter(
+  (upazila) => upazila.districtId === selectedDistrictId,
 );
 
-const areas = getAreas().filter((area) => area.thanaId === selectedThanaId);
+const areas = getAreas().filter((area) => area.upazilaId === selectedUpazilaId);
+
+const villages = getVillages().filter(
+  (village) => village.areaId === selectedAreaId,
+);
 ```
 
-This can be used for:
+This gives you a hierarchy:
 
-- Address forms
-- Checkout forms
-- Delivery addresses
-- Real-estate listings
-- Job locations
-- User profiles
-- Registration forms
-- Location filters
-- Bangladesh map applications
+```text
+Division
+   ↓
+District
+   ↓
+Upazila
+   ↓
+Area
+   ↓
+Village
+```
 
-## React Example
+---
+
+# React Example
 
 ```tsx
 import { useState } from "react";
 
-import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
+import {
+  getDivisions,
+  getDistricts,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "@olism/bd-geo";
 
 export default function AddressForm() {
   const [divisionId, setDivisionId] = useState<number>();
   const [districtId, setDistrictId] = useState<number>();
-  const [thanaId, setThanaId] = useState<number>();
+  const [upazilaId, setUpazilaId] = useState<number>();
+  const [areaId, setAreaId] = useState<number>();
 
   const divisions = getDivisions();
 
@@ -303,15 +534,24 @@ export default function AddressForm() {
     (district) => district.divisionId === divisionId,
   );
 
-  const thanas = getThanas().filter((thana) => thana.districtId === districtId);
+  const upazilas = getUpazilas().filter(
+    (upazila) => upazila.districtId === districtId,
+  );
 
-  const areas = getAreas().filter((area) => area.thanaId === thanaId);
+  const areas = getAreas().filter((area) => area.upazilaId === upazilaId);
+
+  const villages = getVillages().filter((village) => village.areaId === areaId);
 
   return (
     <div>
       <select
         value={divisionId ?? ""}
-        onChange={(event) => setDivisionId(Number(event.target.value))}
+        onChange={(event) => {
+          setDivisionId(Number(event.target.value));
+          setDistrictId(undefined);
+          setUpazilaId(undefined);
+          setAreaId(undefined);
+        }}
       >
         <option value="">Select Division</option>
 
@@ -324,7 +564,11 @@ export default function AddressForm() {
 
       <select
         value={districtId ?? ""}
-        onChange={(event) => setDistrictId(Number(event.target.value))}
+        onChange={(event) => {
+          setDistrictId(Number(event.target.value));
+          setUpazilaId(undefined);
+          setAreaId(undefined);
+        }}
       >
         <option value="">Select District</option>
 
@@ -336,24 +580,42 @@ export default function AddressForm() {
       </select>
 
       <select
-        value={thanaId ?? ""}
-        onChange={(event) => setThanaId(Number(event.target.value))}
+        value={upazilaId ?? ""}
+        onChange={(event) => {
+          setUpazilaId(Number(event.target.value));
+          setAreaId(undefined);
+        }}
       >
-        <option value="">Select Thana / Upazila</option>
+        <option value="">Select Upazila / Thana</option>
 
-        {thanas.map((thana) => (
-          <option key={thana.id} value={thana.id}>
-            {thana.name}
+        {upazilas.map((upazila) => (
+          <option key={upazila.id} value={upazila.id}>
+            {upazila.name}
           </option>
         ))}
       </select>
 
-      <select>
+      <select
+        value={areaId ?? ""}
+        onChange={(event) => {
+          setAreaId(Number(event.target.value));
+        }}
+      >
         <option value="">Select Area</option>
 
         {areas.map((area) => (
           <option key={area.id} value={area.id}>
             {area.name}
+          </option>
+        ))}
+      </select>
+
+      <select>
+        <option value="">Select Village</option>
+
+        {villages.map((village) => (
+          <option key={village.id} value={village.id}>
+            {village.name}
           </option>
         ))}
       </select>
@@ -364,37 +626,188 @@ export default function AddressForm() {
 
 ---
 
-## Using @olism/bd-geo as Database Seed Data
+# Bangla Names
 
-`@olism/bd-geo` can also be used to populate geographical tables in applications built with NestJS, Next.js, Express.js, Prisma, Sequelize, TypeORM, Drizzle, or other database libraries.
+Every geographical entity contains both English and Bangla names.
 
-The package provides plain JavaScript/TypeScript data, so you can transform it into your database's schema.
+Example:
 
-### Example Database Structure
+```ts
+{
+  id: 10,
+  name: "Dhaka",
+  nameBn: "ঢাকা",
+}
+```
 
-A typical relational database can use:
+Use the English name:
+
+```tsx
+<span>{division.name}</span>
+```
+
+Or the Bangla name:
+
+```tsx
+<span>{division.nameBn}</span>
+```
+
+This makes the package suitable for applications with both English and Bangla interfaces.
+
+---
+
+# Filtering by Parent
+
+## Districts by Division
+
+```ts
+const districts = getDistricts().filter(
+  (district) => district.divisionId === divisionId,
+);
+```
+
+## Upazilas by District
+
+```ts
+const upazilas = getUpazilas().filter(
+  (upazila) => upazila.districtId === districtId,
+);
+```
+
+## Areas by Upazila
+
+```ts
+const areas = getAreas().filter((area) => area.upazilaId === upazilaId);
+```
+
+## Villages by Area
+
+```ts
+const villages = getVillages().filter((village) => village.areaId === areaId);
+```
+
+---
+
+# Filtering Unions and Wards
+
+Because `Area` contains a `type` field, you can easily separate unions and wards.
+
+## Get all unions
+
+```ts
+const unions = getAreas().filter((area) => area.type === "union");
+```
+
+## Get all wards
+
+```ts
+const wards = getAreas().filter((area) => area.type === "ward");
+```
+
+## Get unions in an Upazila
+
+```ts
+const unions = getAreas().filter(
+  (area) => area.upazilaId === selectedUpazilaId && area.type === "union",
+);
+```
+
+## Get wards in an Upazila
+
+```ts
+const wards = getAreas().filter(
+  (area) => area.upazilaId === selectedUpazilaId && area.type === "ward",
+);
+```
+
+---
+
+# Village Relationship
+
+Villages are linked to areas.
+
+```text
+Village
+   │
+   └── areaId
+          │
+          ↓
+        Area
+          │
+          └── type: "union"
+```
+
+Example:
+
+```ts
+const areas = getAreas();
+const villages = getVillages();
+
+const village = villages.find((village) => village.id === 1);
+
+const area = areas.find((area) => area.id === village?.areaId);
+```
+
+You can verify that the area is a union:
+
+```ts
+if (area?.type === "union") {
+  console.log("This village belongs to a union.");
+}
+```
+
+---
+
+# Using the Package as Database Seed Data
+
+`@olism/bd-geo` can be used as geographical seed data for applications using:
+
+- Prisma
+- TypeORM
+- Sequelize
+- Drizzle
+- NestJS
+- Next.js
+- Express.js
+- Other SQL/NoSQL database systems
+
+The package provides plain JavaScript/TypeScript data, allowing you to transform it into your own database schema.
+
+---
+
+# Recommended Database Structure
+
+A relational database can use the following structure:
 
 ```text
 divisions
     │
     └── districts
           │
-          └── thanas
-                 │
-                 └── areas
+          └── upazilas
+                │
+                └── areas
+                      │
+                      ├── unions
+                      │     └── villages
+                      │
+                      └── wards
 ```
 
-For example:
+Example tables:
 
 ```text
 divisions
+
 ├── id
 ├── name
 ├── nameBn
 ├── latitude
 └── longitude
 
+
 districts
+
 ├── id
 ├── name
 ├── nameBn
@@ -402,65 +815,44 @@ districts
 ├── latitude
 └── longitude
 
-thanas
+
+upazilas
+
 ├── id
 ├── name
 ├── nameBn
 ├── districtId
-├── latitude
-└── longitude
-
-areas
-├── id
-├── name
-├── nameBn
-├── thanaId
 ├── type
 ├── latitude
 └── longitude
+
+
+areas
+
+├── id
+├── name
+├── nameBn
+├── upazilaId
+├── type
+├── latitude
+└── longitude
+
+
+villages
+
+├── id
+├── name
+├── nameBn
+├── areaId
+├── latitude
+└── longitude
 ```
 
-### NestJS + TypeORM
+---
 
-Install `@olism/bd-geo`:
+# Prisma
 
-```bash
-npm install @olism/bd-geo
-```
-
-Example seed script:
-
-```ts
-import { DataSource } from "typeorm";
-
-import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
-
-import { Division } from "./entities/division.entity";
-import { District } from "./entities/district.entity";
-import { Thana } from "./entities/thana.entity";
-import { Area } from "./entities/area.entity";
-
-export async function seed(dataSource: DataSource) {
-  const divisionRepository = dataSource.getRepository(Division);
-  const districtRepository = dataSource.getRepository(District);
-  const thanaRepository = dataSource.getRepository(Thana);
-  const areaRepository = dataSource.getRepository(Area);
-
-  await divisionRepository.save(getDivisions());
-
-  await districtRepository.save(getDistricts());
-
-  await thanaRepository.save(getThanas());
-
-  await areaRepository.save(getAreas());
-}
-```
-
-Run your seed script according to your NestJS/TypeORM setup.
-
-### NestJS + Prisma
-
-Install the package:
+Install:
 
 ```bash
 npm install @olism/bd-geo
@@ -471,81 +863,13 @@ Example `prisma/seed.ts`:
 ```ts
 import { PrismaClient } from "@prisma/client";
 
-import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
-
-const prisma = new PrismaClient();
-
-async function main() {
-  await prisma.division.createMany({
-    data: getDivisions(),
-  });
-
-  await prisma.district.createMany({
-    data: getDistricts(),
-  });
-
-  await prisma.thana.createMany({
-    data: getThanas(),
-  });
-
-  await prisma.area.createMany({
-    data: getAreas(),
-  });
-}
-
-main()
-  .then(async () => {
-    await prisma.$disconnect();
-  })
-  .catch(async (error) => {
-    console.error(error);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
-```
-
-Make sure your Prisma models use compatible field names and types.
-
-### Express.js + Sequelize
-
-`@olism/bd-geo` works independently of your backend framework, so it can also be used directly with Sequelize.
-
-```ts
-import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
-
-import { Division } from "./models/division";
-import { District } from "./models/district";
-import { Thana } from "./models/thana";
-import { Area } from "./models/area";
-
-export async function seedDatabase() {
-  await Division.bulkCreate(getDivisions());
-
-  await District.bulkCreate(getDistricts());
-
-  await Thana.bulkCreate(getThanas());
-
-  await Area.bulkCreate(getAreas());
-}
-```
-
-### Next.js + Prisma
-
-You can use exactly the same Prisma seed approach in a Next.js application.
-
-Create:
-
-```text
-prisma/
-└── seed.ts
-```
-
-Then:
-
-```ts
-import { PrismaClient } from "@prisma/client";
-
-import { getDivisions, getDistricts, getThanas, getAreas } from "@olism/bd-geo";
+import {
+  getDivisions,
+  getDistricts,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "@olism/bd-geo";
 
 const prisma = new PrismaClient();
 
@@ -560,12 +884,16 @@ async function main() {
     data: getDistricts(),
   });
 
-  await prisma.thana.createMany({
-    data: getThanas(),
+  await prisma.upazila.createMany({
+    data: getUpazilas(),
   });
 
   await prisma.area.createMany({
     data: getAreas(),
+  });
+
+  await prisma.village.createMany({
+    data: getVillages(),
   });
 
   console.log("Bangladesh geographical data seeded successfully.");
@@ -581,21 +909,173 @@ main()
   });
 ```
 
-### Important: Preserve Parent-Child Relationships
+Make sure your Prisma model field names match the data provided by the package.
 
-When inserting the data into a relational database, insert the records in hierarchical order:
+---
+
+# NestJS + TypeORM
+
+Example seed:
+
+```ts
+import { DataSource } from "typeorm";
+
+import {
+  getDivisions,
+  getDistricts,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "@olism/bd-geo";
+
+import { Division } from "./entities/division.entity";
+import { District } from "./entities/district.entity";
+import { Upazila } from "./entities/upazila.entity";
+import { Area } from "./entities/area.entity";
+import { Village } from "./entities/village.entity";
+
+export async function seed(dataSource: DataSource) {
+  const divisionRepository = dataSource.getRepository(Division);
+
+  const districtRepository = dataSource.getRepository(District);
+
+  const upazilaRepository = dataSource.getRepository(Upazila);
+
+  const areaRepository = dataSource.getRepository(Area);
+
+  const villageRepository = dataSource.getRepository(Village);
+
+  await divisionRepository.save(getDivisions());
+
+  await districtRepository.save(getDistricts());
+
+  await upazilaRepository.save(getUpazilas());
+
+  await areaRepository.save(getAreas());
+
+  await villageRepository.save(getVillages());
+}
+```
+
+---
+
+# Express.js + Sequelize
+
+The package works independently of your backend framework.
+
+Example:
+
+```ts
+import {
+  getDivisions,
+  getDistricts,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "@olism/bd-geo";
+
+import { Division } from "./models/division";
+import { District } from "./models/district";
+import { Upazila } from "./models/upazila";
+import { Area } from "./models/area";
+import { Village } from "./models/village";
+
+export async function seedDatabase() {
+  await Division.bulkCreate(getDivisions());
+
+  await District.bulkCreate(getDistricts());
+
+  await Upazila.bulkCreate(getUpazilas());
+
+  await Area.bulkCreate(getAreas());
+
+  await Village.bulkCreate(getVillages());
+}
+```
+
+---
+
+# Next.js + Prisma
+
+You can use the same Prisma seed approach in a Next.js application.
+
+Create:
+
+```text
+prisma/
+└── seed.ts
+```
+
+Then use:
+
+```ts
+import { PrismaClient } from "@prisma/client";
+
+import {
+  getDivisions,
+  getDistricts,
+  getUpazilas,
+  getAreas,
+  getVillages,
+} from "@olism/bd-geo";
+
+const prisma = new PrismaClient();
+
+async function main() {
+  console.log("Seeding Bangladesh geographical data...");
+
+  await prisma.division.createMany({
+    data: getDivisions(),
+  });
+
+  await prisma.district.createMany({
+    data: getDistricts(),
+  });
+
+  await prisma.upazila.createMany({
+    data: getUpazilas(),
+  });
+
+  await prisma.area.createMany({
+    data: getAreas(),
+  });
+
+  await prisma.village.createMany({
+    data: getVillages(),
+  });
+
+  console.log("Bangladesh geographical data seeded successfully.");
+}
+
+main()
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
+```
+
+---
+
+# Important: Preserve Parent-Child Relationships
+
+When inserting geographical data into a relational database, insert the records in hierarchical order:
 
 ```text
 1. Divisions
-      ↓
+       ↓
 2. Districts
-      ↓
-3. Thanas / Upazilas
-      ↓
+       ↓
+3. Upazilas
+       ↓
 4. Areas
+       ↓
+5. Villages
 ```
 
-This is important when your database uses foreign-key constraints.
+This is especially important when your database uses foreign-key constraints.
 
 For example:
 
@@ -608,74 +1088,101 @@ await prisma.district.createMany({
   data: getDistricts(),
 });
 
-await prisma.thana.createMany({
-  data: getThanas(),
+await prisma.upazila.createMany({
+  data: getUpazilas(),
 });
 
 await prisma.area.createMany({
   data: getAreas(),
 });
+
+await prisma.village.createMany({
+  data: getVillages(),
+});
 ```
 
-The IDs provided by `@olism/bd-geo` allow the relationships between the geographical levels to remain consistent.
+The IDs provided by `@olism/bd-geo` allow parent-child relationships to remain consistent.
 
-### Using Only One Level
+---
 
-You don't have to seed the entire dataset.
+# Using Only Specific Levels
+
+You don't need to use the entire dataset.
 
 For example, if your application only needs divisions and districts:
 
 ```ts
 import { getDivisions, getDistricts } from "@olism/bd-geo";
 
-await prisma.division.createMany({
-  data: getDivisions(),
-});
-
-await prisma.district.createMany({
-  data: getDistricts(),
-});
+const divisions = getDivisions();
+const districts = getDistricts();
 ```
 
-Or only thanas:
+Only upazilas:
 
 ```ts
-import { getThanas } from "@olism/bd-geo";
+import { getUpazilas } from "@olism/bd-geo";
 
-const thanas = getThanas();
+const upazilas = getUpazilas();
 ```
 
-This makes `@olism/bd-geo` useful both as a complete Bangladesh geographical dataset and as a source for specific parts of an application's location system.
+Only areas:
+
+```ts
+import { getAreas } from "@olism/bd-geo";
+
+const areas = getAreas();
+```
+
+Only villages:
+
+```ts
+import { getVillages } from "@olism/bd-geo";
+
+const villages = getVillages();
+```
 
 ---
 
-## Bangla Names
+# Coordinates
 
-Each geographical entity contains both English and Bangla names.
+Geographical records may contain optional coordinates:
+
+```ts
+{
+  latitude?: number;
+  longitude?: number;
+}
+```
+
+Example:
 
 ```ts
 {
   id: 10,
   name: "Dhaka",
   nameBn: "ঢাকা",
+  latitude: 23.8103,
+  longitude: 90.4125,
 }
 ```
 
-This makes it possible to build applications supporting both English and Bangla interfaces.
+Coordinates can be useful for:
 
-```tsx
-<span>{division.nameBn}</span>
-```
+- Maps
+- Location markers
+- Distance calculations
+- Delivery systems
+- Location-based search
+- Geographic visualizations
 
-or:
+Coordinates should be treated as geographical reference data and verified before being used for high-precision applications.
 
-```tsx
-<span>{division.name}</span>
-```
+---
 
-## Data Structure
+# Data Structure
 
-The package currently organizes geographical data into:
+The package source is organized approximately as:
 
 ```text
 src/
@@ -685,50 +1192,100 @@ src/
 └── data/
     ├── divisions.json
     ├── districts.json
-    ├── thanas.json
-    └── areas.json
+    ├── upazilas.json
+    ├── areas.json
+    └── villages.json
 ```
 
-The JSON files contain the underlying geographical dataset, while the TypeScript API provides access to that data.
+The JSON files contain the underlying geographical dataset.
 
-## Current API
+The TypeScript API provides convenient access to that data.
+
+---
+
+# Current API
 
 ```ts
 getDivisions();
+
 getDistricts();
-getThanas();
+
+getUpazilas();
+
 getAreas();
+
+getVillages();
 ```
 
-More query and search utilities will be added as the package evolves.
+For backward compatibility:
 
-## Data Accuracy
+```ts
+getThanas();
+```
+
+`getThanas()` is deprecated. New applications should use:
+
+```ts
+getUpazilas();
+```
+
+---
+
+# Data Accuracy
 
 Geographical data is an important part of this package.
 
-Before using the data in production, verify the dataset against authoritative Bangladesh government sources where possible.
+The dataset may evolve over time as geographical information is added, corrected, or improved.
 
-The project aims to maintain consistent:
+Before using the data for critical production purposes, verify the relevant information against authoritative Bangladesh government sources where appropriate.
+
+The project aims to maintain consistency in:
 
 - IDs
 - English names
 - Bangla names
-- Parent relationships
+- Parent-child relationships
 - Administrative classifications
+- Area types
 - Geographic coordinates
 
-## Contributing
+If you discover incorrect information, please contribute a correction.
+
+---
+
+# Contributing
 
 Contributions are welcome.
 
-If you find incorrect geographical information, missing locations, incorrect Bangla names, or incorrect parent-child relationships, please open an issue or submit a pull request.
+You can contribute by:
 
-## Development
+- Adding missing geographical data
+- Correcting English names
+- Correcting Bangla names
+- Correcting parent-child relationships
+- Adding missing villages
+- Correcting area types
+- Improving coordinates
+- Improving tests
+- Improving documentation
+- Reporting bugs
+
+If you find an issue, please open an issue or submit a pull request in the project repository.
+
+---
+
+# Development
 
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/mohammad-oliullah/bd-geo.git
+```
+
+Enter the project:
+
+```bash
+cd bd-geo
 ```
 
 Install dependencies:
@@ -737,19 +1294,21 @@ Install dependencies:
 npm install
 ```
 
-Build the package:
-
-```bash
-npm run build
-```
-
 Run tests:
 
 ```bash
 npm test
 ```
 
-## License
+Build the package:
+
+```bash
+npm run build
+```
+
+---
+
+# License
 
 MIT License
 
@@ -772,7 +1331,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-```
-
-```

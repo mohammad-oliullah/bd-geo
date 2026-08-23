@@ -1,3 +1,20 @@
+/**
+ * I will add bounday later for each area
+
+export interface Polygon {
+  type: "Polygon";
+  coordinates: number[][][]; // [ring][point][lng, lat]
+}
+
+export interface MultiPolygon {
+  type: "MultiPolygon";
+  coordinates: number[][][][]; // [polygon][ring][point][lng, lat]
+}
+
+export type Boundary = Polygon | MultiPolygon;
+
+*/
+
 export interface Division {
   id: number;
   name: string;
@@ -15,11 +32,12 @@ export interface District {
   longitude?: number;
 }
 
-export interface Thana {
+export interface Upazila {
   id: number;
   name: string;
   nameBn: string;
   districtId: number;
+  type?: "upazila" | "thana";
   latitude?: number;
   longitude?: number;
 }
@@ -30,8 +48,17 @@ export interface Area {
   id: number;
   name: string;
   nameBn: string;
-  thanaId: number;
+  upazilaId: number;
   type: AreaType;
+  latitude?: number;
+  longitude?: number;
+}
+
+export interface Village {
+  id: number;
+  name: string;
+  nameBn: string;
+  areaId: number; // must reference an Area where type === 'union' — villages don't exist under wards
   latitude?: number;
   longitude?: number;
 }
