@@ -3,6 +3,14 @@
   "version": "0.1.2",
   "description": "Bangladesh geographical data and utilities",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammad-oliullah/bd-geo.git"
+  },
+  "homepage": "https://github.com/mohammad-oliullah/bd-geo#readme",
+  "bugs": {
+    "url": "https://github.com/mohammad-oliullah/bd-geo/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
