@@ -20,7 +20,7 @@ export function getDistricts(): District[] {
 }
 
 /**
- * Deprecated
+ * @deprecated Use `getUpazilas()` instead. This function will be removed in a future major version.
  */
 export function getThanas(): Upazila[] {
   return thanaData;
