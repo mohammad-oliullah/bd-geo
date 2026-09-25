@@ -6,4 +6,5 @@ export {
   getThanas,
   getUpazilas,
   getAreas,
+  getVillages,
 } from "./geo";
