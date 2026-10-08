@@ -10,9 +10,10 @@ The roadmap may change as the dataset, API, and community requirements evolve.
 
 ### Administrative Data
 
-- [ ] Complete all 8 divisions
-- [ ] Complete all 64 districts
-- [ ] Complete all thanas/upazilas
+- [x] Complete all 8 divisions
+- [x] Complete all 13 city-corporations
+- [x] Complete all 64 districts
+- [x] Complete all thanas+upazilas
 - [ ] Complete all unions
 - [ ] Complete all wards
 - [ ] Verify all English names

@@ -1,51 +1,24 @@
 [
   {
     "id": 1,
-    "name": "Mirpur",
-    "nameBn": "মিরপুর",
+    "name": "Adabor",
+    "nameBn": "আদাবর",
     "districtId": 1,
-    "latitude": 23.8223,
-    "longitude": 90.3654,
+    "latitude": 23.7725,
+    "longitude": 90.3581,
     "type": "thana"
   },
   {
     "id": 2,
-    "name": "Mohammadpur",
-    "nameBn": "মোহাম্মদপুর",
+    "name": "Badda",
+    "nameBn": "বাড্ডা",
     "districtId": 1,
-    "latitude": 23.7643,
-    "longitude": 90.3584,
+    "latitude": 23.7885,
+    "longitude": 90.4266,
     "type": "thana"
   },
   {
     "id": 3,
-    "name": "Dhanmondi",
-    "nameBn": "ধানমন্ডি",
-    "districtId": 1,
-    "latitude": 23.7461,
-    "longitude": 90.3742,
-    "type": "thana"
-  },
-  {
-    "id": 4,
-    "name": "Uttara",
-    "nameBn": "উত্তরা",
-    "districtId": 1,
-    "latitude": 23.8759,
-    "longitude": 90.3795,
-    "type": "thana"
-  },
-  {
-    "id": 5,
-    "name": "Gulshan",
-    "nameBn": "গুলশান",
-    "districtId": 1,
-    "latitude": 23.7925,
-    "longitude": 90.4078,
-    "type": "thana"
-  },
-  {
-    "id": 6,
     "name": "Banani",
     "nameBn": "বনানী",
     "districtId": 1,
@@ -54,129 +27,156 @@
     "type": "thana"
   },
   {
-    "id": 7,
-    "name": "Tejgaon",
-    "nameBn": "তেজগাঁও",
+    "id": 4,
+    "name": "Bangshal",
+    "nameBn": "বংশাল",
     "districtId": 1,
-    "latitude": 23.77,
-    "longitude": 90.39,
+    "latitude": 23.7176,
+    "longitude": 90.4042,
+    "type": "thana"
+  },
+  {
+    "id": 5,
+    "name": "Bhashantek",
+    "nameBn": "ভাষানটেক",
+    "districtId": 1,
+    "latitude": 23.8118,
+    "longitude": 90.392,
+    "type": "thana"
+  },
+  {
+    "id": 6,
+    "name": "Biman Bandar",
+    "nameBn": "বিমানবন্দর",
+    "districtId": 1,
+    "latitude": 23.851,
+    "longitude": 90.4077,
+    "type": "thana"
+  },
+  {
+    "id": 7,
+    "name": "Cantonment",
+    "nameBn": "ক্যান্টনমেন্ট",
+    "districtId": 1,
+    "latitude": 23.8188,
+    "longitude": 90.4032,
     "type": "thana"
   },
   {
     "id": 8,
-    "name": "Motijheel",
-    "nameBn": "মতিঝিল",
+    "name": "Chawkbazar",
+    "nameBn": "চকবাজার",
     "districtId": 1,
-    "latitude": 23.7337,
-    "longitude": 90.4176,
+    "latitude": 23.7161,
+    "longitude": 90.3952,
     "type": "thana"
   },
   {
     "id": 9,
-    "name": "Wari",
-    "nameBn": "ওয়ারী",
+    "name": "Dakshinkhan",
+    "nameBn": "দক্ষিণখান",
     "districtId": 1,
-    "latitude": 23.7208,
-    "longitude": 90.4125,
+    "latitude": 23.8647,
+    "longitude": 90.4354,
     "type": "thana"
   },
   {
     "id": 10,
-    "name": "Lalbagh",
-    "nameBn": "লালবাগ",
+    "name": "Darus Salam",
+    "nameBn": "দারুস সালাম",
     "districtId": 1,
-    "latitude": 23.7195,
-    "longitude": 90.3893,
+    "latitude": 23.7836,
+    "longitude": 90.3533,
     "type": "thana"
   },
   {
     "id": 11,
-    "name": "Hazaribagh",
-    "nameBn": "হাজারীবাগ",
+    "name": "Demra",
+    "nameBn": "ডেমরা",
     "districtId": 1,
-    "latitude": 23.727,
-    "longitude": 90.373,
+    "latitude": 23.7088,
+    "longitude": 90.4901,
     "type": "thana"
   },
   {
     "id": 12,
-    "name": "Kamrangirchar",
-    "nameBn": "কামরাঙ্গীরচর",
+    "name": "Dhamrai",
+    "nameBn": "ধামরাই",
     "districtId": 1,
-    "latitude": 23.705,
-    "longitude": 90.378,
-    "type": "thana"
+    "latitude": 23.9181,
+    "longitude": 90.2159,
+    "type": "upazila"
   },
   {
     "id": 13,
-    "name": "Khilgaon",
-    "nameBn": "খিলগাঁও",
+    "name": "Dhanmondi",
+    "nameBn": "ধানমন্ডি",
     "districtId": 1,
-    "latitude": 23.748,
-    "longitude": 90.429,
+    "latitude": 23.7461,
+    "longitude": 90.3742,
     "type": "thana"
   },
   {
     "id": 14,
-    "name": "Sabujbagh",
-    "nameBn": "সবুজবাগ",
+    "name": "Dohar",
+    "nameBn": "দোহার",
     "districtId": 1,
-    "latitude": 23.738,
-    "longitude": 90.435,
-    "type": "thana"
+    "latitude": 23.5947,
+    "longitude": 90.1345,
+    "type": "upazila"
   },
   {
     "id": 15,
-    "name": "Demra",
-    "nameBn": "ডেমরা",
+    "name": "Gendaria",
+    "nameBn": "গেণ্ডারিয়া",
     "districtId": 1,
-    "latitude": 23.713,
-    "longitude": 90.465,
+    "latitude": 23.7032,
+    "longitude": 90.4208,
     "type": "thana"
   },
   {
     "id": 16,
-    "name": "Rayer Bazar",
-    "nameBn": "রায়ের বাজার",
+    "name": "Gulshan",
+    "nameBn": "গুলশান",
     "districtId": 1,
-    "latitude": 23.748,
-    "longitude": 90.362,
+    "latitude": 23.7925,
+    "longitude": 90.4167,
     "type": "thana"
   },
   {
     "id": 17,
-    "name": "Badda",
-    "nameBn": "বাড্ডা",
+    "name": "Hatirjheel",
+    "nameBn": "হাতিরঝিল",
     "districtId": 1,
-    "latitude": 23.782,
-    "longitude": 90.427,
+    "latitude": 23.7538,
+    "longitude": 90.4101,
     "type": "thana"
   },
   {
     "id": 18,
-    "name": "Khilkhet",
-    "nameBn": "খিলক্ষেত",
+    "name": "Hazaribagh",
+    "nameBn": "হাজারীবাগ",
     "districtId": 1,
-    "latitude": 23.832,
-    "longitude": 90.423,
+    "latitude": 23.735,
+    "longitude": 90.3683,
     "type": "thana"
   },
   {
     "id": 19,
-    "name": "Vatara",
-    "nameBn": "ভাটারা",
+    "name": "Jatrabari",
+    "nameBn": "যাত্রাবাড়ী",
     "districtId": 1,
-    "latitude": 23.813,
-    "longitude": 90.432,
+    "latitude": 23.7104,
+    "longitude": 90.4344,
     "type": "thana"
   },
   {
     "id": 20,
-    "name": "Pallabi",
-    "nameBn": "পল্লবী",
+    "name": "Kadamtali",
+    "nameBn": "কদমতলী",
     "districtId": 1,
-    "latitude": 23.838,
-    "longitude": 90.362,
+    "latitude": 23.6924,
+    "longitude": 90.438,
     "type": "thana"
   },
   {
@@ -184,39 +184,174 @@
     "name": "Kafrul",
     "nameBn": "কাফরুল",
     "districtId": 1,
-    "latitude": 23.802,
-    "longitude": 90.378,
+    "latitude": 23.7963,
+    "longitude": 90.3831,
     "type": "thana"
   },
   {
     "id": 22,
-    "name": "Cantonment",
-    "nameBn": "ক্যান্টনমেন্ট",
+    "name": "Kalabagan",
+    "nameBn": "কলাবাগান",
     "districtId": 1,
-    "latitude": 23.805,
-    "longitude": 90.392,
+    "latitude": 23.7533,
+    "longitude": 90.3813,
     "type": "thana"
   },
   {
     "id": 23,
-    "name": "Sher-e-Bangla Nagar",
-    "nameBn": "শেরেবাংলা নগর",
+    "name": "Kamrangirchar",
+    "nameBn": "কামরাঙ্গীরচর",
     "districtId": 1,
-    "latitude": 23.778,
-    "longitude": 90.378,
+    "latitude": 23.7146,
+    "longitude": 90.3687,
     "type": "thana"
   },
   {
     "id": 24,
-    "name": "Adabor",
-    "nameBn": "আদাবর",
+    "name": "Keraniganj",
+    "nameBn": "কেরানীগঞ্জ",
     "districtId": 1,
-    "latitude": 23.763,
-    "longitude": 90.352,
+    "latitude": 23.6827,
+    "longitude": 90.3128,
+    "type": "upazila"
+  },
+  {
+    "id": 25,
+    "name": "Khilgaon",
+    "nameBn": "খিলগাঁও",
+    "districtId": 1,
+    "latitude": 23.7516,
+    "longitude": 90.4338,
     "type": "thana"
   },
   {
-    "id": 61,
+    "id": 26,
+    "name": "Khilkhet",
+    "nameBn": "খিলক্ষেত",
+    "districtId": 1,
+    "latitude": 23.8298,
+    "longitude": 90.4222,
+    "type": "thana"
+  },
+  {
+    "id": 27,
+    "name": "Kotwali",
+    "nameBn": "কোতোয়ালী",
+    "districtId": 1,
+    "latitude": 23.7077,
+    "longitude": 90.407,
+    "type": "thana"
+  },
+  {
+    "id": 28,
+    "name": "Lalbagh",
+    "nameBn": "লালবাগ",
+    "districtId": 1,
+    "latitude": 23.7189,
+    "longitude": 90.3883,
+    "type": "thana"
+  },
+  {
+    "id": 29,
+    "name": "Mirpur",
+    "nameBn": "মিরপুর",
+    "districtId": 1,
+    "latitude": 23.8223,
+    "longitude": 90.3654,
+    "type": "thana"
+  },
+  {
+    "id": 30,
+    "name": "Mohammadpur",
+    "nameBn": "মোহাম্মদপুর",
+    "districtId": 1,
+    "latitude": 23.7658,
+    "longitude": 90.3583,
+    "type": "thana"
+  },
+  {
+    "id": 31,
+    "name": "Motijheel",
+    "nameBn": "মতিঝিল",
+    "districtId": 1,
+    "latitude": 23.7328,
+    "longitude": 90.4175,
+    "type": "thana"
+  },
+  {
+    "id": 32,
+    "name": "Mugda",
+    "nameBn": "মুগদা",
+    "districtId": 1,
+    "latitude": 23.7297,
+    "longitude": 90.4333,
+    "type": "thana"
+  },
+  {
+    "id": 33,
+    "name": "Nawabganj",
+    "nameBn": "নবাবগঞ্জ",
+    "districtId": 1,
+    "latitude": 23.6653,
+    "longitude": 90.1678,
+    "type": "upazila"
+  },
+  {
+    "id": 34,
+    "name": "New Market",
+    "nameBn": "নিউ মার্কেট",
+    "districtId": 1,
+    "latitude": 23.7332,
+    "longitude": 90.3853,
+    "type": "thana"
+  },
+  {
+    "id": 35,
+    "name": "Pallabi",
+    "nameBn": "পল্লবী",
+    "districtId": 1,
+    "latitude": 23.8248,
+    "longitude": 90.3639,
+    "type": "thana"
+  },
+  {
+    "id": 36,
+    "name": "Paltan",
+    "nameBn": "পল্টন",
+    "districtId": 1,
+    "latitude": 23.7351,
+    "longitude": 90.4103,
+    "type": "thana"
+  },
+  {
+    "id": 37,
+    "name": "Ramna",
+    "nameBn": "রমনা",
+    "districtId": 1,
+    "latitude": 23.741,
+    "longitude": 90.4028,
+    "type": "thana"
+  },
+  {
+    "id": 38,
+    "name": "Rampura",
+    "nameBn": "রামপুরা",
+    "districtId": 1,
+    "latitude": 23.7612,
+    "longitude": 90.4225,
+    "type": "thana"
+  },
+  {
+    "id": 39,
+    "name": "Sabujbagh",
+    "nameBn": "সবুজবাগ",
+    "districtId": 1,
+    "latitude": 23.7386,
+    "longitude": 90.43,
+    "type": "thana"
+  },
+  {
+    "id": 40,
     "name": "Savar",
     "nameBn": "সাভার",
     "districtId": 1,
@@ -225,40 +360,139 @@
     "type": "upazila"
   },
   {
-    "id": 62,
-    "name": "Dhamrai",
-    "nameBn": "ধামরাই",
+    "id": 41,
+    "name": "Shah Ali",
+    "nameBn": "শাহ আলী",
     "districtId": 1,
-    "latitude": 23.9183,
-    "longitude": 90.1014,
-    "type": "upazila"
+    "latitude": 23.8058,
+    "longitude": 90.3522,
+    "type": "thana"
   },
   {
-    "id": 63,
-    "name": "Keraniganj",
-    "nameBn": "কেরানীগঞ্জ",
+    "id": 42,
+    "name": "Shahbagh",
+    "nameBn": "শাহবাগ",
     "districtId": 1,
-    "latitude": 23.6949,
-    "longitude": 90.3444,
-    "type": "upazila"
+    "latitude": 23.7389,
+    "longitude": 90.3958,
+    "type": "thana"
   },
   {
-    "id": 64,
-    "name": "Nawabganj",
-    "nameBn": "নবাবগঞ্জ",
+    "id": 43,
+    "name": "Shahjahanpur",
+    "nameBn": "শাহজাহানপুর",
     "districtId": 1,
-    "latitude": 23.6619,
-    "longitude": 90.1665,
-    "type": "upazila"
+    "latitude": 23.7432,
+    "longitude": 90.4181,
+    "type": "thana"
   },
   {
-    "id": 65,
-    "name": "Dohar",
-    "nameBn": "দোহার",
+    "id": 44,
+    "name": "Sher-e-Bangla Nagar",
+    "nameBn": "শেরেবাংলা নগর",
     "districtId": 1,
-    "latitude": 23.5933,
-    "longitude": 90.1425,
-    "type": "upazila"
+    "latitude": 23.7686,
+    "longitude": 90.3768,
+    "type": "thana"
+  },
+  {
+    "id": 45,
+    "name": "Shyampur",
+    "nameBn": "শ্যামপুর",
+    "districtId": 1,
+    "latitude": 23.6892,
+    "longitude": 90.4323,
+    "type": "thana"
+  },
+  {
+    "id": 46,
+    "name": "Sutrapur",
+    "nameBn": "সূত্রাপুর",
+    "districtId": 1,
+    "latitude": 23.7061,
+    "longitude": 90.4144,
+    "type": "thana"
+  },
+  {
+    "id": 47,
+    "name": "Tejgaon",
+    "nameBn": "তেজগাঁও",
+    "districtId": 1,
+    "latitude": 23.7594,
+    "longitude": 90.3908,
+    "type": "thana"
+  },
+  {
+    "id": 48,
+    "name": "Tejgaon Industrial Area",
+    "nameBn": "তেজগাঁও শিল্পাঞ্চল",
+    "districtId": 1,
+    "latitude": 23.7663,
+    "longitude": 90.4026,
+    "type": "thana"
+  },
+  {
+    "id": 49,
+    "name": "Turag",
+    "nameBn": "তুরাগ",
+    "districtId": 1,
+    "latitude": 23.8828,
+    "longitude": 90.3831,
+    "type": "thana"
+  },
+  {
+    "id": 50,
+    "name": "Uttar Khan",
+    "nameBn": "উত্তরখান",
+    "districtId": 1,
+    "latitude": 23.8794,
+    "longitude": 90.4312,
+    "type": "thana"
+  },
+  {
+    "id": 51,
+    "name": "Uttara Centre",
+    "nameBn": "উত্তরা সেন্টার",
+    "districtId": 1,
+    "latitude": 23.87,
+    "longitude": 90.395,
+    "type": "thana"
+  },
+  {
+    "id": 52,
+    "name": "Uttara East",
+    "nameBn": "উত্তরা পূর্ব",
+    "districtId": 1,
+    "latitude": 23.8683,
+    "longitude": 90.4003,
+    "type": "thana"
+  },
+  {
+    "id": 53,
+    "name": "Uttara West",
+    "nameBn": "উত্তরা পশ্চিম",
+    "districtId": 1,
+    "latitude": 23.8729,
+    "longitude": 90.3888,
+    "type": "thana"
+  },
+  {
+    "id": 54,
+    "name": "Vatara",
+    "nameBn": "ভাটারা",
+    "districtId": 1,
+    "latitude": 23.8055,
+    "longitude": 90.4358,
+    "type": "thana"
+  },
+  {
+    "id": 55,
+    "name": "Wari",
+    "nameBn": "ওয়ারী",
+    "districtId": 1,
+    "latitude": 23.7192,
+    "longitude": 90.4136,
+    "type": "thana"
   },
   {
     "id": 89,
@@ -342,7 +576,7 @@
     "type": "upazila"
   },
   {
-    "id": 25,
+    "id": 700,
     "name": "Gazipur Sadar",
     "nameBn": "গাজীপুর সদর",
     "districtId": 3,
@@ -351,7 +585,7 @@
     "type": "upazila"
   },
   {
-    "id": 26,
+    "id": 701,
     "name": "Tongi",
     "nameBn": "টঙ্গী",
     "districtId": 3,
@@ -360,7 +594,7 @@
     "type": "thana"
   },
   {
-    "id": 27,
+    "id": 702,
     "name": "Kaliakoir",
     "nameBn": "কালিয়াকৈর",
     "districtId": 3,
@@ -369,7 +603,7 @@
     "type": "upazila"
   },
   {
-    "id": 28,
+    "id": 703,
     "name": "Kapasia",
     "nameBn": "কাপাসিয়া",
     "districtId": 3,
@@ -378,7 +612,7 @@
     "type": "upazila"
   },
   {
-    "id": 29,
+    "id": 704,
     "name": "Sreepur",
     "nameBn": "শ্রীপুর",
     "districtId": 3,
@@ -594,7 +828,7 @@
     "type": "upazila"
   },
   {
-    "id": 30,
+    "id": 706,
     "name": "Narayanganj Sadar",
     "nameBn": "নারায়ণগঞ্জ সদর",
     "districtId": 9,
@@ -603,7 +837,7 @@
     "type": "upazila"
   },
   {
-    "id": 31,
+    "id": 707,
     "name": "Rupganj",
     "nameBn": "রূপগঞ্জ",
     "districtId": 9,
@@ -612,7 +846,7 @@
     "type": "upazila"
   },
   {
-    "id": 32,
+    "id": 708,
     "name": "Araihazar",
     "nameBn": "আড়াইহাজার",
     "districtId": 9,
@@ -621,7 +855,7 @@
     "type": "upazila"
   },
   {
-    "id": 33,
+    "id": 709,
     "name": "Sonargaon",
     "nameBn": "সোনারগাঁও",
     "districtId": 9,
@@ -630,7 +864,7 @@
     "type": "upazila"
   },
   {
-    "id": 34,
+    "id": 710,
     "name": "Bandar",
     "nameBn": "বন্দর",
     "districtId": 9,
@@ -846,7 +1080,7 @@
     "type": "upazila"
   },
   {
-    "id": 35,
+    "id": 711,
     "name": "Chattogram Sadar",
     "nameBn": "চট্টগ্রাম সদর",
     "districtId": 14,
@@ -855,7 +1089,7 @@
     "type": "thana"
   },
   {
-    "id": 36,
+    "id": 712,
     "name": "Pahartali",
     "nameBn": "পাহাড়তলী",
     "districtId": 14,
@@ -864,7 +1098,7 @@
     "type": "thana"
   },
   {
-    "id": 37,
+    "id": 713,
     "name": "Halishahar",
     "nameBn": "হালিশহর",
     "districtId": 14,
@@ -873,7 +1107,7 @@
     "type": "thana"
   },
   {
-    "id": 38,
+    "id": 714,
     "name": "Panchlaish",
     "nameBn": "পাঁচলাইশ",
     "districtId": 14,
@@ -882,7 +1116,7 @@
     "type": "thana"
   },
   {
-    "id": 39,
+    "id": 715,
     "name": "Kotwali",
     "nameBn": "কোতোয়ালী",
     "districtId": 14,
@@ -891,7 +1125,7 @@
     "type": "thana"
   },
   {
-    "id": 40,
+    "id": 716,
     "name": "Bayezid Bostami",
     "nameBn": "বায়েজিদ বোস্তামী",
     "districtId": 14,
@@ -900,7 +1134,7 @@
     "type": "thana"
   },
   {
-    "id": 41,
+    "id": 717,
     "name": "Chandgaon",
     "nameBn": "চান্দগাঁও",
     "districtId": 14,
@@ -909,7 +1143,7 @@
     "type": "thana"
   },
   {
-    "id": 42,
+    "id": 718,
     "name": "Double Mooring",
     "nameBn": "ডবলমুরিং",
     "districtId": 14,
@@ -1332,7 +1566,7 @@
     "type": "upazila"
   },
   {
-    "id": 43,
+    "id": 719,
     "name": "Khulna Sadar",
     "nameBn": "খুলনা সদর",
     "districtId": 25,
@@ -1341,7 +1575,7 @@
     "type": "thana"
   },
   {
-    "id": 44,
+    "id": 720,
     "name": "Sonadanga",
     "nameBn": "সোনাডাঙ্গা",
     "districtId": 25,
@@ -1350,7 +1584,7 @@
     "type": "thana"
   },
   {
-    "id": 45,
+    "id": 721,
     "name": "Khalishpur",
     "nameBn": "খালিশপুর",
     "districtId": 25,
@@ -1359,7 +1593,7 @@
     "type": "thana"
   },
   {
-    "id": 46,
+    "id": 722,
     "name": "Khan Jahan Ali",
     "nameBn": "খান জাহান আলী",
     "districtId": 25,
@@ -1368,7 +1602,7 @@
     "type": "thana"
   },
   {
-    "id": 47,
+    "id": 723,
     "name": "Daulatpur",
     "nameBn": "দৌলতপুর",
     "districtId": 25,
@@ -1458,7 +1692,7 @@
     "type": "upazila"
   },
   {
-    "id": 48,
+    "id": 724,
     "name": "Rajshahi Sadar",
     "nameBn": "রাজশাহী সদর",
     "districtId": 35,
@@ -1467,7 +1701,7 @@
     "type": "thana"
   },
   {
-    "id": 49,
+    "id": 725,
     "name": "Boalia",
     "nameBn": "বোয়ালিয়া",
     "districtId": 35,
@@ -1476,7 +1710,7 @@
     "type": "thana"
   },
   {
-    "id": 50,
+    "id": 726,
     "name": "Matihar",
     "nameBn": "মতিহার",
     "districtId": 35,
@@ -1485,7 +1719,7 @@
     "type": "thana"
   },
   {
-    "id": 51,
+    "id": 727,
     "name": "Shah Makhdum",
     "nameBn": "শাহ মখদুম",
     "districtId": 35,
@@ -1647,7 +1881,7 @@
     "type": "upazila"
   },
   {
-    "id": 52,
+    "id": 729,
     "name": "Sylhet Sadar",
     "nameBn": "সিলেট সদর",
     "districtId": 51,
@@ -1656,7 +1890,7 @@
     "type": "upazila"
   },
   {
-    "id": 53,
+    "id": 730,
     "name": "South Surma",
     "nameBn": "দক্ষিণ সুরমা",
     "districtId": 51,
@@ -1665,7 +1899,7 @@
     "type": "upazila"
   },
   {
-    "id": 54,
+    "id": 731,
     "name": "Osmani Nagar",
     "nameBn": "ওসমানী নগর",
     "districtId": 51,
@@ -1764,7 +1998,7 @@
     "type": "upazila"
   },
   {
-    "id": 55,
+    "id": 735,
     "name": "Mymensingh Sadar",
     "nameBn": "ময়মনসিংহ সদর",
     "districtId": 55,
@@ -3696,15 +3930,6 @@
     "districtId": 44,
     "latitude": 25.85,
     "longitude": 88.75,
-    "type": "upazila"
-  },
-  {
-    "id": 414,
-    "name": "Nawabganj",
-    "nameBn": "নবাবগঞ্জ",
-    "districtId": 44,
-    "latitude": 25.9,
-    "longitude": 88.55,
     "type": "upazila"
   },
   {
