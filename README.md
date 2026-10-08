@@ -6,36 +6,16 @@ Bangladesh geographical data and utilities for JavaScript and TypeScript.
 [![npm downloads](https://img.shields.io/npm/dm/@olism/bd-geo.svg)](https://www.npmjs.com/package/@olism/bd-geo)
 [![License](https://img.shields.io/npm/l/@olism/bd-geo.svg)](LICENSE)
 
-> [!IMPORTANT]
-> **Always use the latest version of `@olism/bd-geo`.**
->
-> This package is actively maintained and geographical data is continuously being improved and expanded.
-> New releases may include updated geographical data, additional locations, corrections, and API improvements.
->
-> Check the latest version on [npm](https://www.npmjs.com/package/@olism/bd-geo) before installing or upgrading.
+`@olism/bd-geo` provides structured Bangladesh geographic data, including divisions, districts, city corporations, upazilas/thanas, areas, and villages.
 
-`@olism/bd-geo` provides structured geographical data for Bangladesh, including:
+The package is useful for:
 
-- Divisions
-- Districts
-- Upazilas / Thanas
-- Unions
-- Wards
-- Villages
-
-The package is designed for applications such as:
-
-- Address forms
-- Location selectors
-- Delivery systems
-- E-commerce applications
-- Real-estate platforms
-- Job platforms
-- User profiles
-- Registration forms
-- Location filters
-- Bangladesh-focused maps
-- Database seed data
+- address forms and profile data
+- location selectors and filters
+- e-commerce and delivery systems
+- property and real-estate apps
+- database seeding and admin dashboards
+- Bangladesh-specific map and geo UI components
 
 ---
 
@@ -61,51 +41,43 @@ pnpm add @olism/bd-geo
 
 ---
 
-## Geography Hierarchy
+## Geography hierarchy
 
-The geographical structure provided by the package is:
+This package models the Bangladesh geographic structure like this:
 
 ```text
 Division
-   │
-   └── District
-          │
-          └── Upazila / Thana
-                    │
-                    └── Area
-                         ├── Union
-                         │     └── Village
-                         │
-                         └── Ward
+  └── District
+      └── Upazila / Thana
+          └── Area
+              ├── Union
+              │   └── Village
+              └── Pourashava
 ```
 
-### Important
+Important notes:
 
-- `Upazila` and `Thana` are represented by the same geographical level.
-- `Area` can be either a `union` or a `ward`.
-- A `Village` belongs to an `Area` whose type is `union`.
-- Villages do not belong directly to wards.
+- `Upazila` and `Thana` are represented by the same level.
+- `Area` can be either `union` or `pourashava`.
+- `Village` entries only belong to areas whose `type` is `union`.
+- `wardNo` is included where relevant for wards and village records.
 
 ---
 
-# Quick Start
-
-Import the functions you need:
+## Quick start
 
 ```ts
 import {
   getDivisions,
+  getCityCorporations,
   getDistricts,
   getUpazilas,
   getAreas,
   getVillages,
 } from "@olism/bd-geo";
-```
 
-Then use them directly:
-
-```ts
 const divisions = getDivisions();
+const cityCorporations = getCityCorporations();
 const districts = getDistricts();
 const upazilas = getUpazilas();
 const areas = getAreas();
@@ -114,20 +86,14 @@ const villages = getVillages();
 
 ---
 
-# API
+## API
 
-## `getDivisions()`
+### `getDivisions()`
 
-Returns all available Bangladesh divisions.
+Returns all Bangladesh divisions.
 
 ```ts
 const divisions = getDivisions();
-```
-
-Return type:
-
-```ts
-Division[]
 ```
 
 Example:
@@ -138,29 +104,52 @@ Example:
     id: 1,
     name: "Barishal",
     nameBn: "বরিশাল",
+    latitude: 22.7,
+    longitude: 90.35,
   },
   {
     id: 2,
     name: "Chattogram",
     nameBn: "চট্টগ্রাম",
+    latitude: 22.35,
+    longitude: 91.8,
   },
 ];
 ```
 
 ---
 
-## `getDistricts()`
+### `getCityCorporations()`
 
-Returns all available Bangladesh districts.
+Returns all city corporations.
+
+```ts
+const cityCorporations = getCityCorporations();
+```
+
+Example:
+
+```ts
+[
+  {
+    id: 1,
+    divisionId: 3,
+    name: "Dhaka North City Corporation",
+    nameBn: "ঢাকা উত্তর সিটি কর্পোরেশন",
+    latitude: 23.81,
+    longitude: 90.41,
+  },
+];
+```
+
+---
+
+### `getDistricts()`
+
+Returns all districts.
 
 ```ts
 const districts = getDistricts();
-```
-
-Return type:
-
-```ts
-District[]
 ```
 
 Example:
@@ -172,24 +161,20 @@ Example:
     name: "Dhaka",
     nameBn: "ঢাকা",
     divisionId: 3,
+    latitude: 23.81,
+    longitude: 90.41,
   },
 ];
 ```
 
 ---
 
-## `getUpazilas()`
+### `getUpazilas()`
 
-Returns all available upazilas.
+Returns all upazilas and thanas.
 
 ```ts
 const upazilas = getUpazilas();
-```
-
-Return type:
-
-```ts
-Upazila[]
 ```
 
 Example:
@@ -202,50 +187,34 @@ Example:
     nameBn: "মিরপুর",
     districtId: 1,
     type: "thana",
+    latitude: 23.8,
+    longitude: 90.36,
   },
 ];
 ```
 
 ---
 
-## `getThanas()`
+### `getThanas()`
 
 > [!WARNING]
 > `getThanas()` is deprecated.
 >
-> Use `getUpazilas()` for new applications.
+> Use `getUpazilas()` instead.
 
 ```ts
 const thanas = getThanas();
 ```
 
-It returns the same data as:
-
-```ts
-getUpazilas();
-```
-
-This function is kept for backward compatibility.
-
-### Recommended
-
-```ts
-const upazilas = getUpazilas();
-```
-
-### Legacy
-
-```ts
-const thanas = getThanas();
-```
+This function remains for backward compatibility and returns the same data as `getUpazilas()`.
 
 ---
 
-## `getAreas()`
+### `getAreas()`
 
 Returns all available areas.
 
-An area can be either:
+An area can be one of:
 
 ```ts
 "union";
@@ -254,7 +223,7 @@ An area can be either:
 or:
 
 ```ts
-"ward";
+"pourashava";
 ```
 
 Example:
@@ -263,40 +232,29 @@ Example:
 const areas = getAreas();
 ```
 
-Return type:
-
-```ts
-Area[]
-```
-
-Example:
-
 ```ts
 [
   {
     id: 1,
     name: "Mirpur-1",
     nameBn: "মিরপুর-১",
-    upazilaId: 1,
-    type: "ward",
+    upazilaOrThanaId: 1,
+    type: "union",
+    wardNo: 1,
+    latitude: 23.8,
+    longitude: 90.36,
   },
 ];
 ```
 
 ---
 
-## `getVillages()`
+### `getVillages()`
 
 Returns all available villages.
 
 ```ts
 const villages = getVillages();
-```
-
-Return type:
-
-```ts
-Village[]
 ```
 
 Example:
@@ -308,11 +266,16 @@ Example:
     name: "Example Village",
     nameBn: "উদাহরণ গ্রাম",
     areaId: 10,
+    wardNo: 1,
+    latitude: 23.8,
+    longitude: 90.36,
   },
 ];
 ```
 
-A village's `areaId` references an area where:
+`wardNo` is optional in the dataset and may be omitted for some records.
+
+A village must reference an area where:
 
 ```ts
 area.type === "union";
@@ -320,11 +283,11 @@ area.type === "union";
 
 ---
 
-# TypeScript Types
+## TypeScript types
 
-The package exports TypeScript types for all geographical levels.
+The package exports the following types.
 
-## Division
+### `Division`
 
 ```ts
 export interface Division {
@@ -336,9 +299,20 @@ export interface Division {
 }
 ```
 
----
+### `CityCorporation`
 
-## District
+```ts
+export interface CityCorporation {
+  id: number;
+  divisionId: number;
+  name: string;
+  nameBn: string;
+  latitude?: number;
+  longitude?: number;
+}
+```
+
+### `District`
 
 ```ts
 export interface District {
@@ -351,11 +325,7 @@ export interface District {
 }
 ```
 
----
-
-## Upazila
-
-An upazila and thana are represented by the same geographical level.
+### `Upazila`
 
 ```ts
 export interface Upazila {
@@ -369,52 +339,44 @@ export interface Upazila {
 }
 ```
 
-The optional `type` field can distinguish between:
+### `Area`
 
 ```ts
-"upazila";
-```
-
-and:
-
-```ts
-"thana";
-```
-
----
-
-## Area
-
-```ts
-export type AreaType = "union" | "ward";
+export type AreaType = "pourashava" | "union";
 
 export interface Area {
   id: number;
   name: string;
   nameBn: string;
-  upazilaId: number;
+  upazilaOrThanaId: number;
   type: AreaType;
+  wardNo?: number;
   latitude?: number;
   longitude?: number;
 }
 ```
 
----
-
-## Village
+### `Village`
 
 ```ts
 export interface Village {
   id: number;
   name: string;
   nameBn: string;
+  wardNo?: number;
   areaId: number;
   latitude?: number;
   longitude?: number;
 }
 ```
 
-A village must reference an `Area` whose type is `union`.
+---
+
+## Notes
+
+- The package is written in TypeScript and ships with type declarations.
+- Data is exported as plain JavaScript arrays/objects for easy use in Node.js and browser-based apps.
+- Some fields like `latitude`, `longitude`, and `wardNo` are optional depending on the dataset record.
 
 ---
 

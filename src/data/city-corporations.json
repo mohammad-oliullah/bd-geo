@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "divisionId": 1,
+    "name": "Barishal",
+    "nameBn": "বরিশাল",
+    "latitude": 22.7,
+    "longitude": 90.366667
+  },
+  {
+    "id": 2,
+    "divisionId": 6,
+    "name": "Bogura",
+    "nameBn": "বগুড়া",
+    "latitude": 24.8465,
+    "longitude": 89.3773
+  },
+  {
+    "id": 3,
+    "divisionId": 2,
+    "name": "Chattogram",
+    "nameBn": "চট্টগ্রাম",
+    "latitude": 22.335109,
+    "longitude": 91.834073
+  },
+  {
+    "id": 4,
+    "divisionId": 2,
+    "name": "Cumilla",
+    "nameBn": "কুমিল্লা",
+    "latitude": 23.4607,
+    "longitude": 91.1809
+  },
+  {
+    "id": 5,
+    "divisionId": 3,
+    "name": "Dhaka North",
+    "nameBn": "ঢাকা উত্তর",
+    "latitude": 23.7925,
+    "longitude": 90.4078
+  },
+  {
+    "id": 6,
+    "divisionId": 3,
+    "name": "Dhaka South",
+    "nameBn": "ঢাকা দক্ষিণ",
+    "latitude": 23.7115253,
+    "longitude": 90.4111451
+  },
+  {
+    "id": 7,
+    "divisionId": 3,
+    "name": "Gazipur",
+    "nameBn": "গাজীপুর",
+    "latitude": 23.9999,
+    "longitude": 90.4203
+  },
+  {
+    "id": 8,
+    "divisionId": 4,
+    "name": "Khulna",
+    "nameBn": "খুলনা",
+    "latitude": 22.815774,
+    "longitude": 89.568679
+  },
+  {
+    "id": 9,
+    "divisionId": 5,
+    "name": "Mymensingh",
+    "nameBn": "ময়মনসিংহ",
+    "latitude": 24.743448,
+    "longitude": 90.398384
+  },
+  {
+    "id": 10,
+    "divisionId": 3,
+    "name": "Narayanganj",
+    "nameBn": "নারায়ণগঞ্জ",
+    "latitude": 23.6238,
+    "longitude": 90.5
+  },
+  {
+    "id": 11,
+    "divisionId": 6,
+    "name": "Rajshahi",
+    "nameBn": "রাজশাহী",
+    "latitude": 24.7106,
+    "longitude": 88.9414
+  },
+  {
+    "id": 12,
+    "divisionId": 7,
+    "name": "Rangpur",
+    "nameBn": "রংপুর",
+    "latitude": 25.7558096,
+    "longitude": 89.244462
+  },
+  {
+    "id": 13,
+    "divisionId": 8,
+    "name": "Sylhet",
+    "nameBn": "সিলেট",
+    "latitude": 24.8897956,
+    "longitude": 91.8697894
+  }
+]

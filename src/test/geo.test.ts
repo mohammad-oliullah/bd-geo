@@ -7,7 +7,7 @@ import {
   getUpazilas,
   getAreas,
   getVillages,
-} from "./geo";
+} from "../geo";
 
 describe("bd-geo", () => {
   // ─────────────────────────────────────────────────────────────
@@ -58,6 +58,7 @@ describe("bd-geo", () => {
 
   it("should have unique division IDs", () => {
     const divisions = getDivisions();
+
     const ids = divisions.map((division) => division.id);
 
     expect(new Set(ids).size).toBe(ids.length);
@@ -65,6 +66,7 @@ describe("bd-geo", () => {
 
   it("should have unique district IDs", () => {
     const districts = getDistricts();
+
     const ids = districts.map((district) => district.id);
 
     expect(new Set(ids).size).toBe(ids.length);
@@ -72,26 +74,64 @@ describe("bd-geo", () => {
 
   it("should have unique upazila IDs", () => {
     const upazilas = getUpazilas();
-    const ids = upazilas.map((upazila) => upazila.id);
+
+    const seen = new Set<number>();
+    const duplicates = new Set<number>();
+
+    for (const upazila of upazilas) {
+      if (seen.has(upazila.id)) {
+        duplicates.add(upazila.id);
+      }
+
+      seen.add(upazila.id);
+    }
+
+    expect(
+      duplicates,
+      `Duplicate upazila IDs found: ${[...duplicates].join(", ")}`,
+    ).toEqual(new Set());
+  });
+
+  it("should have unique area IDs", () => {
+    const areas = getAreas();
+
+    const seen = new Set<number>();
+    const duplicates = new Set<number>();
+
+    for (const area of areas) {
+      if (seen.has(area.id)) {
+        duplicates.add(area.id);
+      }
+
+      seen.add(area.id);
+    }
+
+    expect(
+      duplicates,
+      `Duplicate area IDs found: ${[...duplicates].join(", ")}`,
+    ).toEqual(new Set());
+  });
+
+  it("should have unique village IDs", () => {
+    const villages = getVillages();
+
+    const ids = villages.map((village) => village.id);
 
     expect(new Set(ids).size).toBe(ids.length);
   });
+
+  // ─────────────────────────────────────────────────────────────
+  // Area name uniqueness
+  // ─────────────────────────────────────────────────────────────
 
   it("should not have duplicate area names of the same type within the same upazila", () => {
     const areas = getAreas();
 
     const keys = areas.map(
-      (area) => `${area.upazilaId}:${area.type}:${area.name}`,
+      (area) => `${area.upazilaOrThanaId}:${area.type}:${area.name}`,
     );
 
     expect(new Set(keys).size).toBe(keys.length);
-  });
-
-  it("should have unique village IDs", () => {
-    const villages = getVillages();
-    const ids = villages.map((village) => village.id);
-
-    expect(new Set(ids).size).toBe(ids.length);
   });
 
   // ─────────────────────────────────────────────────────────────
@@ -135,11 +175,13 @@ describe("bd-geo", () => {
     const areas = getAreas();
 
     for (const area of areas) {
-      const upazila = upazilas.find((upazila) => upazila.id === area.upazilaId);
+      const upazila = upazilas.find(
+        (upazila) => upazila.id === area.upazilaOrThanaId,
+      );
 
       expect(
         upazila,
-        `Area "${area.name}" has invalid upazilaId ${area.upazilaId}`,
+        `Area "${area.name}" has invalid upazilaOrThanaId ${area.upazilaOrThanaId}`,
       ).toBeDefined();
     }
   });
@@ -186,7 +228,7 @@ describe("bd-geo", () => {
     const areas = getAreas();
 
     for (const area of areas) {
-      expect(["union", "ward"]).toContain(area.type);
+      expect(["pourashava", "union"]).toContain(area.type);
     }
   });
 
@@ -314,16 +356,16 @@ describe("bd-geo", () => {
     const byUpazila = new Map<number, string[]>();
 
     for (const area of areas) {
-      const list = byUpazila.get(area.upazilaId) ?? [];
+      const list = byUpazila.get(area.upazilaOrThanaId) ?? [];
 
       list.push(area.name);
-      byUpazila.set(area.upazilaId, list);
+      byUpazila.set(area.upazilaOrThanaId, list);
     }
 
-    for (const [upazilaId, names] of byUpazila) {
+    for (const [upazilaOrThanaId, names] of byUpazila) {
       expect(
         new Set(names).size,
-        `Upazila ${upazilaId} has duplicate area names: ${names.join(", ")}`,
+        `Upazila ${upazilaOrThanaId} has duplicate area names: ${names.join(", ")}`,
       ).toBe(names.length);
     }
   });

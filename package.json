@@ -1,6 +1,6 @@
 {
   "name": "@olism/bd-geo",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Bangladesh geographical data and utilities",
   "license": "MIT",
   "repository": {
@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "test": "vitest"
+    "test": "vitest",
+    "test:run": "./src/test/run-test.sh"
   },
   "keywords": [
     "bangladesh",
